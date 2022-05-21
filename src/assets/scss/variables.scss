@@ -1,0 +1,29 @@
+
+$main-color: #299035;
+$background-color: #E5E5E5;
+
+@mixin main-font-normal($size) {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+}
+@mixin main-font-bold($size) {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: $size;
+}
+
+@mixin full-display {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@mixin flex-column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
