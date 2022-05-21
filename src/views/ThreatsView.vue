@@ -1,10 +1,12 @@
 <template>
-
+  <div class="threats">
+    Страница угроз
+  </div>
 </template>
 
 <script>
 export default {
-  name: "MainPage"
+  name: "ThreatsView"
 }
 </script>
 

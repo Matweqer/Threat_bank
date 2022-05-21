@@ -5,13 +5,13 @@ $background-color: #E5E5E5;
 @mixin main-font-normal($size) {
   font-family: 'Inter', serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-size: $size;
 }
 @mixin main-font-bold($size) {
   font-family: 'Inter', serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   font-size: $size;
 }
 

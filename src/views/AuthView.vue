@@ -14,7 +14,7 @@
 import AuthForm from "@/components/AuthForm";
 
 export default {
-  name: "AuthPage",
+  name: "AuthView",
   components: {
     AuthForm
   }
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/scss/variables.scss";
+@import "../assets/scss/variables";
 
   .auth {
     display: flex;
