@@ -1,7 +1,6 @@
 <template>
-  <div class="main">
-
-
+  <div class="home">
+    Домашнаяя страница
   </div>
 </template>
 
@@ -20,10 +19,5 @@ export default {
 
 <style lang="scss" scoped>
 @import  'src/assets/scss/variables.scss';
-
-.main {
-
-}
-
 
 </style>

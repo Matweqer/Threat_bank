@@ -25,9 +25,14 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  width: 100vw;
+}
 
 .main {
-  @include flex-column-center
+  @include flex-column-center;
+
+  padding-bottom: 106px;
 }
 
 </style>

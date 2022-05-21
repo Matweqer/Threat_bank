@@ -1,17 +1,15 @@
 <template>
-  <div class="main">
-    <nav class="main__nav">
-      <router-link to='/'>
+    <nav class="nav">
+      <router-link class="nav__item" to='/'>
         Главная
-      </router-link>
-      <router-link to='/services'>
+      </router-link >
+      <router-link class="nav__item" to='/services'>
         Сервисы
       </router-link>
-      <router-link to='/threats'>
+      <router-link class="nav__item" to='/threats'>
         Быза данных угроз
       </router-link>
     </nav>
-  </div>
 </template>
 
 <script>
@@ -24,16 +22,19 @@ export default {
 
 @import "src/assets/scss/variables";
 
-.main {
+.nav {
   width: 1366px;
-  @include flex-column-center;
-  &__nav {
+  display: flex;
+  justify-content: space-around;
+  &__item{
+    text-decoration: none;
     @include main-font-bold(28px);
-     width: 80%;
-     margin-top: 60px;
-     display: flex;
-     justify-content: space-around;
-   }
+    color: #000000;
+  }
+  &__item:hover {
+    color: $main-color
+  }
 }
+
 
 </style>
