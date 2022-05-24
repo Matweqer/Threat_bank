@@ -52,7 +52,7 @@ export default {
   &__button {
      width: 136px;
      height: 45px;
-     background-color: $main-color;
+     background-color: $color-main;
      border-radius: 10px;
      border: none;
      margin-top: 47px;

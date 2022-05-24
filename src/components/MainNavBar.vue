@@ -32,7 +32,7 @@ export default {
     color: #000000;
   }
   &__item:hover {
-    color: $main-color
+    color: $color-main
   }
 }
 

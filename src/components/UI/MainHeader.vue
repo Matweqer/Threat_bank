@@ -24,7 +24,7 @@ export default {
   .header {
     height: 60px;
     width: 100%;
-    background-color: $main-color;
+    background-color: $color-main;
     margin-bottom: 60px;
     display: flex;
     justify-content: flex-end;

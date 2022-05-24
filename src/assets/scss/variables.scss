@@ -1,15 +1,16 @@
 
-$main-color: #299035;
+$color-main: #299035;
 $background-color: #E5E5E5;
+$font-main: 'Inter', serif;
 
 @mixin main-font-normal($size) {
-  font-family: 'Inter', serif;
+  font-family: $font-main;
   font-style: normal;
   font-weight: normal;
   font-size: $size;
 }
 @mixin main-font-bold($size) {
-  font-family: 'Inter', serif;
+  font-family: $font-main;
   font-style: normal;
   font-weight: bold;
   font-size: $size;

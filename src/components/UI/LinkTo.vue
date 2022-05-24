@@ -25,7 +25,7 @@ export default {
   opacity: 0.7;
   transition: text-shadow ease 150ms;
   &__text {
-    color: $main-color;
+    color: $color-main;
     @include main-font-normal(24px);
     margin-right: 25px;
   }
@@ -36,6 +36,6 @@ export default {
 }
 .link:hover {
   opacity: 0.9;
-  text-shadow: $main-color 0 0 1px;
+  text-shadow: $color-main 0 0 1px;
 }
 </style>
