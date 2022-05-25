@@ -1,18 +1,26 @@
 <template>
+  <header class="header">
+    <MainHeader class="header__head"></MainHeader>
+    <MainNavBar class="header__nav"></MainNavBar>
+  </header>
   <main class="main">
-    <MainHeader class="main__header" ></MainHeader>
-    <MainNavBar class="main__nav" ></MainNavBar>
+    <router-view/>
+
   </main>
-  <router-view/>
+  <MainFooter class="home__footer"></MainFooter>
+
 </template>
 
 <script>
 import MainNavBar from "@/components/MainNavBar";
+import MainFooter from "@/components/UI/MainFooter";
+
 
 export default {
   name: "App",
   components: {
-    MainNavBar
+    MainNavBar,
+    MainFooter
   },
 }
 </script>
@@ -45,7 +53,7 @@ export default {
   box-sizing: border-box;
 }
 
-.main {
+.header {
   @include flex-column-center;
   background-color: $background-color;
   padding-bottom: 106px;
