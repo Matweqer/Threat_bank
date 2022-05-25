@@ -7,7 +7,9 @@
     <router-view/>
 
   </main>
-  <MainFooter class="home__footer"></MainFooter>
+  <footer>
+    <MainFooter class="home__footer"></MainFooter>
+  </footer>
 
 </template>
 
@@ -25,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import  'src/assets/scss/variables.scss';
 
 ::-webkit-scrollbar {
@@ -45,7 +47,6 @@ export default {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #656565;
 }
-
 
 * {
   margin: 0;

@@ -37,8 +37,5 @@ export default {
   &__desktop {
     width: 100%;
   }
-  &__base-info{
-    padding-bottom: 300px;
-  }
 }
 </style>

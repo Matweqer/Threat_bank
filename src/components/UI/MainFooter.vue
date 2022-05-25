@@ -1,6 +1,8 @@
 <template>
-  <div class="footer">
+  <div class="container">
+    <div class="footer">
 
+    </div>
   </div>
 </template>
 
@@ -12,10 +14,14 @@ export default {
 
 <style lang="scss" scoped>
 @import  'src/assets/scss/variables.scss';
+.container{
+  padding-top: 200px;
+  background-color: $background-color;
+}
+.footer {
+  width: 100%;
+  height: 230px;
+  background: $color-main;
 
-  .footer {
-    width: 100%;
-    height: 230px;
-    background: $color-main;
-  }
+}
 </style>
