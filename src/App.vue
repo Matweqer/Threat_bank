@@ -15,23 +15,20 @@
 
 <script>
 import MainNavBar from "@/components/MainNavBar";
-import MainFooter from "@/components/UI/MainFooter";
-
 
 export default {
   name: "App",
   components: {
     MainNavBar,
-    MainFooter
   },
 }
 </script>
 
 <style lang="scss" >
-@import  'src/assets/scss/variables.scss';
+@import  'src/assets/scss/index.scss';
 
 ::-webkit-scrollbar {
-  width: 16px; /* ширина для вертикального скролла */
+  width: 12px; /* ширина для вертикального скролла */
   background-color: $background-color;
 }
 ::-webkit-scrollbar-track {

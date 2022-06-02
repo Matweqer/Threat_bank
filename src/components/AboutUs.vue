@@ -31,12 +31,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/variables.scss';
+@import  'src/assets/scss/index.scss';
 
 .about-us {
   @include flex-column-center;
   height: 720px;
   padding-top: 77px;
+  margin-bottom: 170px;
   &__container {
     width: 98%;
     display: flex;

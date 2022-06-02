@@ -1,7 +1,4 @@
-
-$color-main: #299035;
-$background-color: #E5E5E5;
-$font-main: 'Inter', serif;
+@import "variables";
 
 @mixin main-font-normal($size) {
   font-family: $font-main;
@@ -17,11 +14,9 @@ $font-main: 'Inter', serif;
 }
 
 @mixin full-display {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 @mixin flex-column-center{
