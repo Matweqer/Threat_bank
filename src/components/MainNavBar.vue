@@ -1,6 +1,6 @@
 <template>
     <nav class="nav">
-      <router-link class="nav__item" to='/'>
+      <router-link class="nav__item" to='/home'>
         Главная
       </router-link >
       <router-link class="nav__item" to='/services'>

@@ -3,7 +3,7 @@ import Views from "@/views";
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: Views.HomeView
   },
