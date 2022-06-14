@@ -72,11 +72,11 @@ export default {
       link: {
         toAuth: '/auth',
         toServices: '/services',
-        toThreats: '/threats'
+        toThreats: '/threats-view'
       },
       image: {
         statDiagram: '/assets/images/home-view/stats.png',
-        service: '/assets/images/home-view/service.png',
+        service: '/assets/images/home-view/threat.png',
         threat: '/assets/images/home-view/threatBase.png'
       }
     }

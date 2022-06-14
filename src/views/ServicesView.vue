@@ -6,6 +6,8 @@
           :link="linkToThreats"
           link-title="Реализовать модель угроз"
           title-red="Модель угроз (безопасности информации)"
+          :img-src="images.threat"
+
       >
         — это физическое, математическое, описательное представление
         свойств или характеристик угроз безопасности информации.
@@ -16,6 +18,7 @@
           :link="linkToThreats"
           link-title="Реализовать модель нарушителя"
           title-red="Модель нарушителя"
+          :img-src="images.intruder"
       >
         представляет собой  совокупность предположений о
         возможностях нарушителя, которые он может использовать для разработки
@@ -27,6 +30,7 @@
           :link="linkToThreats"
           link-title="Рассчитать вектор атаки"
           title-red="Вектор атаки"
+          :img-src="images.vector"
       >
         определяет путь, которым злоумышленники доставляют
         полезную нагрузку на компьютер. Для одного и того же устройства
@@ -50,7 +54,12 @@ export default {
   },
   data() {
     return {
-      linkToThreats: '/threats'
+      linkToThreats: '/threats-view',
+      images: {
+        threat: '../assets/images/services-view/threat.png',
+        intruder: '../assets/images/services-view/intruder.png',
+        vector: '../assets/images/services-view/Vector.png',
+      }
     }
   }
 }

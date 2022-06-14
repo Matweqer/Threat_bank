@@ -4,7 +4,7 @@
       style="width: 410px"
   >
       <div class="item__left">
-        <img class="item__left__img" src="../assets/images/home-view/service.png" alt="service img">
+        <img class="item__left__img" :src="imgSrc" alt="service img">
         <div class="item__left__subtitle">{{subtitle}}</div>
       </div>
 
@@ -47,6 +47,10 @@ export default {
     link: {
       type: String,
       required: true
+    },
+    imgSrc: {
+      type: String,
+      default: "../assets/images/services-view/threat.png"
     }
   },
   methods: {
@@ -75,7 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/variables.scss';
+@import  'src/assets/scss/index.scss';
 
 .item {
   position: relative;

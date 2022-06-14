@@ -7,7 +7,7 @@
     <slot></slot>
   </main>
   <footer>
-    <MainFooter class="home__footer"></MainFooter>
+    <MainFooter class="footer"></MainFooter>
   </footer>
 
 </template>
@@ -28,7 +28,11 @@ export default {
 
 .header {
   @include flex-column-center;
+  flex: 1 0 auto;
   background-color: $background-color;
   padding-bottom: 106px;
+}
+.footer {
+  flex: 0 1 auto;
 }
 </style>

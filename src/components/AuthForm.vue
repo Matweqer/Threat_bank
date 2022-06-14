@@ -21,7 +21,6 @@ export default {
 
 .form {
   @include flex-column-center;
-
     input {
     width: 335px;
     height: 45px;
