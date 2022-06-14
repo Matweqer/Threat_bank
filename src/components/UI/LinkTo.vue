@@ -22,6 +22,7 @@ export default {
   text-decoration: none;
   display: flex;
   align-items: center;
+  align-content: center;
   opacity: 0.7;
   transition: text-shadow ease 150ms;
   &__text {
@@ -30,6 +31,11 @@ export default {
     margin-right: 25px;
   }
   &__arrow {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 1px;
     width: 24px;
     height: 15px;
   }

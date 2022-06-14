@@ -5,12 +5,9 @@
 </template>
 
 <script>
-// import MainNavBar from "@/components/MainNavBar";
-
 export default {
   name: "App",
   components: {
-    // MainNavBar,
   },
 }
 </script>
@@ -42,10 +39,5 @@ export default {
   box-sizing: border-box;
 }
 
-.header {
-  @include flex-column-center;
-  background-color: $background-color;
-  padding-bottom: 106px;
-}
 
 </style>

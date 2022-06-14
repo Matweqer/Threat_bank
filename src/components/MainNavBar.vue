@@ -7,7 +7,7 @@
         Сервисы
       </router-link>
       <router-link class="nav__item" to='/threats'>
-        Быза данных угроз
+        База данных угроз
       </router-link>
     </nav>
 </template>

@@ -3,6 +3,11 @@ import Views from "@/views";
 
 const routes = [
   {
+    path: '/',
+    name: 'main',
+    component: Views.HomeView
+  },
+  {
     path: '/home',
     name: 'home',
     component: Views.HomeView

@@ -24,5 +24,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import  'src/assets/scss/index.scss';
 
+.header {
+  @include flex-column-center;
+  background-color: $background-color;
+  padding-bottom: 106px;
+}
 </style>
