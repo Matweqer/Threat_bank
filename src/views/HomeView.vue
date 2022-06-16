@@ -72,7 +72,7 @@ export default {
       link: {
         toAuth: '/auth',
         toServices: '/services',
-        toThreats: '/threats-view'
+        toThreats: '/threats-bank'
       },
       image: {
         statDiagram: '/assets/images/home-view/stats.png',

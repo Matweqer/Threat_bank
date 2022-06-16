@@ -15,9 +15,6 @@ const routes = [
   {
     path: '/auth',
     name: 'auth',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: Views.AuthView
   },
   {
@@ -26,10 +23,19 @@ const routes = [
     component: Views.ServicesView
   },
   {
-    path: '/threats',
+    path: '/threats-bank',
     name: 'threats',
     component: Views.ThreatsView
   },
+  // {
+  //   path: '/*',
+  //   redirect: '/error',
+  // },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'PageNotFound',
+    component: Views.NotFoundView
+  }
 ]
 
 const router = createRouter({
