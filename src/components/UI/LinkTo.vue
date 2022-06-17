@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/variables.scss';
+@import  'src/assets/scss/index.scss';
 
 .link {
   text-decoration: none;

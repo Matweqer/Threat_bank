@@ -6,7 +6,7 @@
       <router-link class="nav__item" to='/services'>
         Сервисы
       </router-link>
-      <router-link class="nav__item" to='/threats'>
+      <router-link class="nav__item" to='/threats-bank'>
         База данных угроз
       </router-link>
     </nav>

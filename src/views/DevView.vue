@@ -3,10 +3,10 @@
   <div class="not-found">
     <div class="not-found__container">
       <p class="not-found__num">
-        404
+        Данная страница в разработке
       </p>
       <p class="not-found__text">
-        Страница не найдена
+        Попробуйте посетить этот раздел позднее
       </p>
       <p
           class="not-found__back"
@@ -47,7 +47,8 @@ export default {
   }
 
   &__num {
-    @include main-font-bold(72px)
+    @include main-font-bold(56px);
+    margin-bottom: 20px;
   }
 
   &__text {
@@ -64,6 +65,7 @@ export default {
     }
   }
   &__back:hover {
+    text-decoration: underline;
     text-shadow: black 0 0 1px;
     cursor: pointer;
     img {

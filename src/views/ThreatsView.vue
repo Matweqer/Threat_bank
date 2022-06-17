@@ -1,47 +1,64 @@
 <template>
   <MainWrap>
-    <div class="threats">
+    <div
+        class="threats"
+        v-if="$route.path === '/threats-bank' "
+    >
       <ThreatItem
           subtitle="Атаки"
-          :img-src="images.attack"
+          :img-src="image.attack"
+          :link-to="link.toAttacks"
       >
 
       </ThreatItem>
 
       <ThreatItem
           subtitle="Уязвимости"
-          :img-src="images.weak"
+          :img-src="image.vuln"
+          :link-to="link.toVuln"
       >
 
       </ThreatItem>
 
       <ThreatItem
           subtitle="СФХ"
-          :img-src="images.sfh"
+          :img-src="image.sfh"
+          :link-to="link.toSFC"
       >
 
       </ThreatItem>
 
       <ThreatItem
           subtitle="Объект"
-          :img-src="images.obj"
+          :img-src="image.obj"
+          :link-to="link.toObj"
       >
 
       </ThreatItem>
 
       <ThreatItem
           subtitle="Риск"
-          :img-src="images.risk"
+          :img-src="image.risk"
+          :link-to="link.toRisk"
       >
 
       </ThreatItem>
 
       <ThreatItem
           subtitle="Контрмеры"
-          :img-src="images.contr"
+          :img-src="image.countr"
+          :link-to="link.toCountr"
       >
 
       </ThreatItem>
+    </div>
+    <div
+        class="threat"
+        v-else
+    >
+      <router-view>
+
+      </router-view>
     </div>
   </MainWrap>
 </template>
@@ -58,14 +75,22 @@ export default {
   name: "ThreatsView",
   data() {
     return {
-      images: {
+      image: {
         attack: '../assets/images/threats-view/ThreatIcon.png',
-        weak: '../assets/images/threats-view/weakness.png',
+        vuln: '../assets/images/threats-view/weakness.png',
         sfh: '../assets/images/threats-view/sfh.png',
         obj: '../assets/images/threats-view/obj.png',
         risk: '../assets/images/threats-view/risk.png',
-        contr: '../assets/images/threats-view/contr.png',
-      }
+        countr: '../assets/images/threats-view/contr.png',
+      },
+      link: {
+        toAttacks: '/threats-bank/attacks',
+        toVuln: '/threats-bank/vulnerabilities',
+        toSFC: '/threats-bank/SFC',
+        toObj: '/threats-bank/object',
+        toRisk: '/threats-bank/risk',
+        toCountr: '/threats-bank/countermeasures',
+      },
     }
   }
 }
