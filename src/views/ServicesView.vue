@@ -1,9 +1,12 @@
 <template>
   <MainWrap>
-    <div class="services">
+    <div
+        class="services"
+        v-if="$route.path === '/services' "
+    >
       <ServiceItem
           subtitle="Модель угроз"
-          :link="linkToThreats"
+          :link="link.toThreatsModel"
           link-title="Реализовать модель угроз"
           title-red="Модель угроз (безопасности информации)"
           :img-src="images.threat"
@@ -15,7 +18,7 @@
 
       <ServiceItem
           subtitle="Модель нарушителя"
-          :link="linkToThreats"
+          :link="link.toIntruderModel"
           link-title="Реализовать модель нарушителя"
           title-red="Модель нарушителя"
           :img-src="images.intruder"
@@ -27,7 +30,7 @@
 
       <ServiceItem
           subtitle="Вектор атаки"
-          :link="linkToThreats"
+          :link="link.toAttackVector"
           link-title="Рассчитать вектор атаки"
           title-red="Вектор атаки"
           :img-src="images.vector"
@@ -38,6 +41,14 @@
 
       </ServiceItem>
 
+    </div>
+    <div
+        class="service"
+        v-else
+    >
+      <router-view>
+
+      </router-view>
     </div>
   </MainWrap>
 </template>
@@ -54,7 +65,11 @@ export default {
   },
   data() {
     return {
-      linkToThreats: '/threats-view',
+      link: {
+        toThreatsModel: '/services/threats-model',
+        toIntruderModel: '/services/intruder-model',
+        toAttackVector: '/services/attack-vector'
+      },
       images: {
         threat: '../assets/images/services-view/threat.png',
         intruder: '../assets/images/services-view/intruder.png',

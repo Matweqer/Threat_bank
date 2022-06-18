@@ -1,6 +1,7 @@
 import Views from "@/views";
 
 import ThreatsRoutes from "@/router/threats-routes";
+import ServicesRoutes from "@/router/services-routes";
 
 const routes = [
     {
@@ -21,7 +22,8 @@ const routes = [
     {
         path: '/services',
         name: 'services',
-        component: Views.ServicesView
+        component: Views.ServicesView,
+        children: ServicesRoutes
     },
     {
         path: '/threats-bank',
