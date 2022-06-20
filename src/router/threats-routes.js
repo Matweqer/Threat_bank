@@ -1,35 +1,36 @@
 import Views from "@/views";
 
+import paths from "@/constants/paths.js";
 
 // threats children routes
 export default [
     {
-        path: '/threats-bank/attacks',
+        path: paths.attacks,
         name: 'attacks',
         component: Views.AttacksView
     },
     {
-        path: '/threats-bank/vulnerabilities',
+        path: paths.vulnerabilities,
         name: 'vulnerabilities',
         component: Views.VulnerabilitiesView
     },
     {
-        path: '/threats-bank/SFC',
+        path: paths.sfc,
         name: 'SFC',
         component: Views.SfcView
     },
     {
-        path: '/threats-bank/object',
+        path: paths.object,
         name: 'object',
         component: Views.ObjectView
     },
     {
-        path: '/threats-bank/risk',
+        path: paths.risk,
         name: 'risk',
         component: Views.RiskView
     },
     {
-        path: '/threats-bank/countermeasures',
+        path: paths.countermeasures,
         name: 'countermeasures',
         component: Views.CountermeasuresView
     }

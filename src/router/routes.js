@@ -1,38 +1,42 @@
 import Views from "@/views";
 
+
+import paths from "@/constants/paths.js";
+
+
 import ThreatsRoutes from "@/router/threats-routes";
 import ServicesRoutes from "@/router/services-routes";
 
 const routes = [
     {
-        path: '/',
+        path: paths.main,
         name: 'main',
         component: Views.HomeView
     },
     {
-        path: '/home',
+        path: paths.home,
         name: 'home',
         component: Views.HomeView
     },
     {
-        path: '/auth',
+        path: paths.auth,
         name: 'auth',
         component: Views.AuthView
     },
     {
-        path: '/services',
+        path: paths.services,
         name: 'services',
         component: Views.ServicesView,
         children: ServicesRoutes
     },
     {
-        path: '/threats-bank',
+        path: paths.threats,
         name: 'threats',
         component: Views.ThreatsView,
         children: ThreatsRoutes,
     },
     {
-        path: '/dev',
+        path: paths.development,
         name: 'development',
         component: Views.DevView
     },
