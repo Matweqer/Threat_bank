@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "src/assets/scss/variables";
+@import "../../assets/scss/variables";
 
 .nav {
   width: 1366px;

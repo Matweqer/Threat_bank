@@ -13,11 +13,9 @@
 </template>
 
 <script>
-import MainNavBar from "@/components/MainNavBar";
 
 export default {
   components: {
-    MainNavBar
   },
   name: "HomePage"
 }

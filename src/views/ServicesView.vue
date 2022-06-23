@@ -6,7 +6,7 @@
     >
       <ServiceItem
           subtitle="Модель угроз"
-          :link="link.toThreatsModel"
+          :link="links.threatsModel"
           link-title="Реализовать модель угроз"
           title-red="Модель угроз (безопасности информации)"
           :img-src="images.threat"
@@ -18,7 +18,7 @@
 
       <ServiceItem
           subtitle="Модель нарушителя"
-          :link="link.toIntruderModel"
+          :link="links.intruderModel"
           link-title="Реализовать модель нарушителя"
           title-red="Модель нарушителя"
           :img-src="images.intruder"
@@ -30,7 +30,7 @@
 
       <ServiceItem
           subtitle="Вектор атаки"
-          :link="link.toAttackVector"
+          :link="links.attackVector"
           link-title="Рассчитать вектор атаки"
           title-red="Вектор атаки"
           :img-src="images.vector"
@@ -42,6 +42,7 @@
       </ServiceItem>
 
     </div>
+
     <div
         class="service"
         v-else
@@ -57,6 +58,8 @@
 import MainWrap from "@/ViewWrap/MainWrap";
 import ServiceItem from "@/components/ServiceItem";
 
+import paths from "@/constants/paths";
+
 export default {
   name: "ServicesView",
   components: {
@@ -65,10 +68,8 @@ export default {
   },
   data() {
     return {
-      link: {
-        toThreatsModel: '/services/threats-model',
-        toIntruderModel: '/services/intruder-model',
-        toAttackVector: '/services/attack-vector'
+      links: {
+        ...paths
       },
       images: {
         threat: '../assets/images/services-view/threat.png',

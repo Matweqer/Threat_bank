@@ -9,7 +9,7 @@
             style=""
             class="home__stats"
             :img-src="image.statDiagram"
-            :link="link.toAuth">
+            :link="links.auth">
           <template v-slot:title>Статистика за год</template>
           <template v-slot:text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом
@@ -25,7 +25,7 @@
             style="flex-direction: row-reverse"
             class="home__services"
             :img-src="image.service"
-            :link="link.toServices">
+            :link="links.services">
           <template v-slot:title>Сервисы</template>
           <template v-slot:text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом
@@ -40,7 +40,7 @@
             style=""
             class="home__threats"
             :img-src="image.threat"
-            :link="link.toThreats">
+            :link="links.threats">
           <template v-slot:title>База данных угроз</template>
           <template v-slot:text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом
@@ -60,6 +60,9 @@ import MainWrap from "@/ViewWrap/MainWrap";
 import AboutUs from "@/components/AboutUs";
 import InfoSection from "@/components/InfoSection";
 
+import paths from "@/constants/paths";
+
+
 export default {
   name: "HomeView",
   components: {
@@ -69,14 +72,12 @@ export default {
   },
   data() {
     return {
-      link: {
-        toAuth: '/auth',
-        toServices: '/services',
-        toThreats: '/threats-bank'
+      links: {
+        ...paths
       },
       image: {
         statDiagram: '/assets/images/home-view/stats.png',
-        service: '/assets/images/home-view/threat.png',
+        service: '',
         threat: '/assets/images/home-view/threatBase.png'
       }
     }
@@ -85,13 +86,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/variables.scss';
+@import 'src/assets/scss/variables.scss';
+
 .home {
   background: $background-color;
+
   &__container {
     margin: 0 auto;
     width: 1366px;
   }
+
   &__desktop {
     width: 100%;
   }

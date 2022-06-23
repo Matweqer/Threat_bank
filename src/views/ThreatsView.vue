@@ -7,7 +7,7 @@
       <ThreatItem
           subtitle="Атаки"
           :img-src="image.attack"
-          :link-to="link.toAttacks"
+          :link-to="links.attacks"
       >
 
       </ThreatItem>
@@ -15,7 +15,7 @@
       <ThreatItem
           subtitle="Уязвимости"
           :img-src="image.vuln"
-          :link-to="link.toVuln"
+          :link-to="links.vulnerabilities"
       >
 
       </ThreatItem>
@@ -23,7 +23,7 @@
       <ThreatItem
           subtitle="СФХ"
           :img-src="image.sfh"
-          :link-to="link.toSFC"
+          :link-to="links.sfc"
       >
 
       </ThreatItem>
@@ -31,7 +31,7 @@
       <ThreatItem
           subtitle="Объект"
           :img-src="image.obj"
-          :link-to="link.toObj"
+          :link-to="links.object"
       >
 
       </ThreatItem>
@@ -39,7 +39,7 @@
       <ThreatItem
           subtitle="Риск"
           :img-src="image.risk"
-          :link-to="link.toRisk"
+          :link-to="links.risk"
       >
 
       </ThreatItem>
@@ -47,7 +47,7 @@
       <ThreatItem
           subtitle="Контрмеры"
           :img-src="image.countr"
-          :link-to="link.toCountr"
+          :link-to="links.countermeasures"
       >
 
       </ThreatItem>
@@ -66,6 +66,9 @@
 <script>
 import MainWrap from "@/ViewWrap/MainWrap";
 import ThreatItem from "@/components/ThreatItem";
+import paths from "@/constants/paths";
+
+
 
 export default {
   components: {
@@ -83,13 +86,8 @@ export default {
         risk: '../assets/images/threats-view/risk.png',
         countr: '../assets/images/threats-view/contr.png',
       },
-      link: {
-        toAttacks: '/threats-bank/attacks',
-        toVuln: '/threats-bank/vulnerabilities',
-        toSFC: '/threats-bank/SFC',
-        toObj: '/threats-bank/object',
-        toRisk: '/threats-bank/risk',
-        toCountr: '/threats-bank/countermeasures',
+      links: {
+        ...paths
       },
     }
   }
