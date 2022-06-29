@@ -42,7 +42,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  padding-bottom: 140px;
+  padding-bottom: 10px;
   background: $background-color;
 
 

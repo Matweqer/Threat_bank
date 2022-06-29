@@ -39,5 +39,9 @@ export default {
   box-sizing: border-box;
 }
 
+body {
+  background-color: $background-color;
+}
+
 
 </style>

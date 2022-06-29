@@ -143,6 +143,7 @@ export default {
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    border: none;
     background-color: $color-main;
     display: flex;
     align-items: center;
