@@ -6,17 +6,17 @@ import paths from "@/constants/paths.js";
 export default [
     {
         path: paths.threatsModel,
-        name: 'threats-model',
+        name: 'Модель угрозы',
         component: Views.ThreatsModelView
     },
     {
         path: paths.intruderModel,
-        name: 'intruder-model',
+        name: 'Модель нарушителя',
         component: Views.IntruderModelView
     },
     {
         path: paths.attackVector,
-        name: 'attack-vector',
+        name: 'Вектор атаки',
         component: Views.AttackVectorView
     },
 ]

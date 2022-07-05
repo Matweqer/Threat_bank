@@ -33,4 +33,17 @@ export default {
 .header__user {
   margin-right: 16px;
 }
+
+@media (max-width: 700px) {
+  .header__container {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__container {
+    height: 38px;
+    margin-bottom: 22px;
+  }
+}
 </style>

@@ -1,12 +1,12 @@
 <template>
 
   <div class="attacks">
-    <CurrentPath :path="path"></CurrentPath>
+    <CurrentPath></CurrentPath>
 
     <div class="attacks__container">
       <ItemsList
           class="attacks__list"
-          :items="attacksList"
+          :items="attacks"
       >
 
       </ItemsList>
@@ -18,147 +18,26 @@
     </div>
 
   </div>
+
+  <router-view>
+
+  </router-view>
 </template>
 
 <script>
 import ItemsList from "@/components/ItemsList";
-import paths from "@/constants/paths";
 
-const {threats, attacks} = paths
+import attacks from '@/constants/attacks.js'
+
+
 export default {
   components: {ItemsList},
   name: "AttacksView",
   data() {
     return {
-      path: [
-        {
-          name: 'Банк угроз',
-          link: threats
-        },
-        {
-          name: 'Список атак',
-          link: attacks
-        }
-      ],
-      attacksList: [
-        {
-          "id": 1,
-          "name": "TEST",
-          "description": "TEST Description",
-          "attack_purpose": 0,
-          "impact_nature": 0,
-          "tools": [
-            "0",
-            "4"
-          ],
-          "consequences": [
-            "1"
-          ],
-          "impact_level": 3,
-          "destabilization_level": 3,
-          "archetypes": "TEST Архетип",
-          "intruder": 1,
-          "intruder_motive": 1,
-          "intruder_possibility": 1
-        },
-        {
-          "id": 2,
-          "name": "Атака на БПЛА для перехвата управления другими БПЛА",
-          "description": "Используется дрон, который летает, ищет беспроводной сигнал любого другого дрона радиусе своего действия, принудительно отключает беспроводное соединение легитимного пользователя целевого дрона, затем аутентифицируется с целевым дроном, представляет себя его владельцем, затем передает команды ему и всем другим дронам-зомби, которых он сумел захватить.",
-          "attack_purpose": 2,
-          "impact_nature": 0,
-          "tools": [
-            "3",
-            "4"
-          ],
-          "consequences": [
-            "0"
-          ],
-          "impact_level": 1,
-          "destabilization_level": 1,
-          "archetypes": "технологическая уязвимость:\r\n – уязвимость системы связи;\r\n – физическая незащищенность беспроводных каналов связи. \r\n\r\nэксплуатационная уязвимость:\r\n – использование слабых паролей.",
-          "intruder": 7,
-          "intruder_motive": 17,
-          "intruder_possibility": 2
-        },
-        {
-          "id": 3,
-          "name": "TEST",
-          "description": "TEST Description",
-          "attack_purpose": 0,
-          "impact_nature": 0,
-          "tools": [
-            "0",
-            "4"
-          ],
-          "consequences": [
-            "1"
-          ],
-          "impact_level": 3,
-          "destabilization_level": 3,
-          "archetypes": "TEST Архетип",
-          "intruder": 1,
-          "intruder_motive": 1,
-          "intruder_possibility": 1
-        },
-        {
-          "id": 4,
-          "name": "TEST",
-          "description": "TEST Description",
-          "attack_purpose": 0,
-          "impact_nature": 0,
-          "tools": [
-            "0",
-            "4"
-          ],
-          "consequences": [
-            "1"
-          ],
-          "impact_level": 3,
-          "destabilization_level": 3,
-          "archetypes": "TEST Архетип",
-          "intruder": 1,
-          "intruder_motive": 1,
-          "intruder_possibility": 1
-        },
-        {
-          "id": 5,
-          "name": "TEST",
-          "description": "TEST Description",
-          "attack_purpose": 0,
-          "impact_nature": 0,
-          "tools": [
-            "0",
-            "4"
-          ],
-          "consequences": [
-            "1"
-          ],
-          "impact_level": 3,
-          "destabilization_level": 3,
-          "archetypes": "TEST Архетип",
-          "intruder": 1,
-          "intruder_motive": 1,
-          "intruder_possibility": 1
-        },
-
-      ]
+      attacks
     }
   },
-  methods: {
-    getAttacks() {
-      fetch('http://5.188.118.169:8000/api/attacks/attacks/')
-          .then((response) => {
-            console.log(response.json())
-          }).catch((error) => console.log(error))
-
-    },
-  },
-
-  beforeMount() {
-    this.getAttacks()
-  },
-
 }
 
 </script>

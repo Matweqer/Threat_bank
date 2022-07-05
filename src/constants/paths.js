@@ -11,6 +11,7 @@ export default {
 
     threats: '/threats-bank',
     attacks: '/threats-bank/attacks',
+    attack: '/threats-bank/attacks/:id',
     vulnerabilities: '/threats-bank/vulnerabilities',
     sfc: '/threats-bank/SFC',
     object: '/threats-bank/object',

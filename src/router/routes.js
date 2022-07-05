@@ -10,39 +10,39 @@ import ServicesRoutes from "@/router/services-routes";
 const routes = [
     {
         path: paths.main,
-        name: 'main',
+        name: 'Основная',
         component: Views.HomeView
     },
     {
         path: paths.home,
-        name: 'home',
+        name: 'Домашняя',
         component: Views.HomeView
     },
     {
         path: paths.auth,
-        name: 'auth',
+        name: 'Авторизация',
         component: Views.AuthView
     },
     {
         path: paths.services,
-        name: 'services',
+        name: 'Сервисы',
         component: Views.ServicesView,
         children: ServicesRoutes
     },
     {
         path: paths.threats,
-        name: 'threats',
+        name: 'База данных угроз',
         component: Views.ThreatsView,
         children: ThreatsRoutes,
     },
     {
         path: paths.development,
-        name: 'development',
+        name: 'Разработка',
         component: Views.DevView
     },
     {
         path: '/:pathMatch(.*)*',
-        name: 'PageNotFound',
+        name: 'Страница не найдена',
         component: Views.NotFoundView
     },
 ]

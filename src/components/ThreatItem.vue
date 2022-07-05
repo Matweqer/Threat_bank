@@ -43,7 +43,7 @@ export default {
 
 .link {
   text-decoration: none;
-  color: $color-main;
+  color: #000000;
 }
 .item {
   @include flex-column-center;
@@ -71,6 +71,70 @@ export default {
 .item:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .item {
+    width: 280px;
+    height: 330px;
+    margin: 0 25px 41px;
+    &__img {
+      width: 135px;
+      height: 135px;
+    }
+    &__subtitle {
+      @include main-font-normal(26px);
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .item {
+    width: 230px;
+    height: 270px;
+    margin: 0 15px 41px;
+    &__img {
+      width: 110px;
+      height: 110px;
+    }
+    &__subtitle {
+      @include main-font-normal(24px);
+      margin-top: 45px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .item {
+    width: 180px;
+    height: 210px;
+    margin: 0 15px 41px;
+    &__img {
+      width: 90px;
+      height: 90px;
+    }
+    &__subtitle {
+      @include main-font-normal(20px);
+      margin-top: 35px;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .item {
+    width: 115px;
+    height: 146px;
+    margin: 0 15px 41px;
+    &__img {
+      width: 41px;
+      height: 41px;
+    }
+    &__subtitle {
+      @include main-font-normal(14px);
+      margin-top: 26px;
+    }
+  }
 }
 
 

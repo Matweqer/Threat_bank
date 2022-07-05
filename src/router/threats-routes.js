@@ -6,32 +6,37 @@ import paths from "@/constants/paths.js";
 export default [
     {
         path: paths.attacks,
-        name: 'attacks',
+        name: 'Атаки',
         component: Views.AttacksView
     },
     {
+        path: paths.attack,
+        name: 'Атака',
+        component: Views.AttackItemView
+    },
+    {
         path: paths.vulnerabilities,
-        name: 'vulnerabilities',
+        name: 'Уязвимости',
         component: Views.VulnerabilitiesView
     },
     {
         path: paths.sfc,
-        name: 'SFC',
+        name: 'СФХ',
         component: Views.SfcView
     },
     {
         path: paths.object,
-        name: 'object',
+        name: 'Объект',
         component: Views.ObjectView
     },
     {
         path: paths.risk,
-        name: 'risk',
+        name: 'Риск',
         component: Views.RiskView
     },
     {
         path: paths.countermeasures,
-        name: 'countermeasures',
+        name: 'Контрмеры',
         component: Views.CountermeasuresView
     }
 ]

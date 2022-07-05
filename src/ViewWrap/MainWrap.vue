@@ -33,4 +33,11 @@ export default {
 .footer {
   flex: 0 1 auto;
 }
+
+@media (max-width: 480px) {
+  .header{
+    padding-bottom: 50px;
+  }
+}
+
 </style>

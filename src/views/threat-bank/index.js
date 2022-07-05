@@ -5,6 +5,9 @@ import ObjectView from "@/views/threat-bank/ObjectView";
 import RiskView from "@/views/threat-bank/RiskView";
 import CountermeasuresView from "@/views/threat-bank/CountermeasuresView";
 
+import AttackItemView from "@/views/threat-bank/AttackItemView";
+
+
 
 export default {
     AttacksView,
@@ -13,4 +16,5 @@ export default {
     ObjectView,
     RiskView,
     CountermeasuresView,
+    AttackItemView
 }

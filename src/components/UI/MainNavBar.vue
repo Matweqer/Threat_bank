@@ -26,15 +26,52 @@ export default {
   width: 1366px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   &__item{
+    margin: 0 20px;
     text-decoration: none;
-    @include main-font-bold(28px);
+    @include main-font-normal(28px);
     color: #000000;
   }
   &__item:hover {
     color: $color-main
   }
 }
+
+@media (max-width: 1100px) {
+  .nav {
+    width: 1000px;
+    &__item{
+      @include main-font-normal(24px);
+    }
+  }
+}
+@media (max-width: 900px) {
+  .nav {
+    width: 700px;
+    &__item{
+      @include main-font-normal(24px);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    width: 500px;
+    &__item{
+      @include main-font-normal(18px);
+    }
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    width: 320px;
+    &__item{
+      @include main-font-normal(12px);
+    }
+  }
+}
+
 
 
 </style>
