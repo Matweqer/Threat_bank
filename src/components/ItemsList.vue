@@ -65,12 +65,12 @@ li {
 .sort {
   padding-left: 32px;
   margin-top: 65px;
-  @include main-font-normal(20px);
+  @include main-font(20px, 500);
 
   &__by {
     border: none;
     background: $background-color;
-    @include main-font-normal(20px);
+    @include main-font(20px, 500);
     color: #AAAAAA;
   }
 
@@ -101,12 +101,12 @@ li {
     transition: height 0.2s ease-out 0s, margin 0.3s ease-out 0s, padding-left 0.2s ease-out 0s;
 
     &__id {
-      @include main-font-bold(24px)
+      @include main-font(24px, 700)
     }
 
     &__name {
       margin-left: 20px;
-      @include main-font-normal(24px)
+      @include main-font(24px, 500)
     }
   }
   &__item:hover {

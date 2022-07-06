@@ -11,7 +11,7 @@
       <div class="item__right">
         <div class="item__right__content">
           <p class="item__right__text">
-            <span class="item__right__text__red">{{titleRed}}</span>
+            <span class="item__right__text__green">{{titleRed}}</span>
             <slot></slot>
           </p>
           <LinkTo :to="link"> {{linkTitle}} </LinkTo>
@@ -104,7 +104,7 @@ export default {
     }
     &__subtitle {
       margin-top: 20px;
-      @include main-font-normal(24px);
+      @include main-font(28px, 500)
     }
   }
   &__right {
@@ -120,7 +120,7 @@ export default {
 
 
     &__content {
-      @include main-font-normal(24px);
+      @include main-font(24px, 400);
       position: absolute;
       left: 560px;
       top: 100px;
@@ -129,8 +129,8 @@ export default {
     }
     &__text {
       margin-bottom: 85px;
-      &__red {
-        color: #B70303;
+      &__green {
+        color: $color-main;
       }
     }
   }
@@ -155,9 +155,9 @@ export default {
     box-shadow: gray 0 0 5px;
     cursor: pointer;
   }
-  &__subtitle {
-    margin-top: 55px;
-    @include main-font-normal(28px)
-  }
+  //&__subtitle {
+  //  margin-top: 55px;
+  //  @include main-font(28px, 500)
+  //}
 }
 </style>

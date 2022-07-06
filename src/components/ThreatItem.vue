@@ -59,7 +59,7 @@ export default {
     height: 170px;
   }
   &__subtitle {
-    @include main-font-normal(28px);
+    @include main-font(28px, 600);
     margin-top: 70px;
     transition: font-size 0.3s ease-out 0s;
   }
@@ -83,7 +83,7 @@ export default {
       height: 135px;
     }
     &__subtitle {
-      @include main-font-normal(26px);
+      @include main-font(26px, 600);
       margin-top: 60px;
     }
   }
@@ -99,7 +99,7 @@ export default {
       height: 110px;
     }
     &__subtitle {
-      @include main-font-normal(24px);
+      @include main-font(24px, 600);
       margin-top: 45px;
     }
   }
@@ -114,7 +114,7 @@ export default {
       height: 90px;
     }
     &__subtitle {
-      @include main-font-normal(20px);
+      @include main-font(20px, 500);
       margin-top: 35px;
     }
   }
@@ -131,7 +131,7 @@ export default {
       height: 41px;
     }
     &__subtitle {
-      @include main-font-normal(14px);
+      @include main-font(14px, 500);
       margin-top: 26px;
     }
   }

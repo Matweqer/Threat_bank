@@ -48,12 +48,13 @@ export default {
     width: 1100px;
     display: flex;
     justify-content: flex-start;
-    @include main-font-bold(40px);
+    @include main-font(48px, 500);
+    font-style: italic;
 
   }
   &__text {
     margin: 107px 24px 65px;
-    @include main-font-normal(24px);
+    @include main-font(24px, 400);
     text-align: left;
     vertical-align: center;
   }

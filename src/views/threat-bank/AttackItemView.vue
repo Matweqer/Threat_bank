@@ -62,23 +62,23 @@
       <table class="info__intruder__table table">
         <tr class="table__row">
           <td class="table__row__name">Тип</td>
-          <td class="table__row__content"></td>
+          <td class="table__row__content"> ???? </td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Вид</td>
-          <td class="table__row__content">dsfsd sdfsdfsdf</td>
+          <td class="table__row__content">{{attack.intruder}}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Мотив</td>
-          <td class="table__row__content">dsfsd sdfsdfsdf</td>
+          <td class="table__row__content">{{attack.intruder_motive}}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Возможности</td>
-          <td class="table__row__content">dsfsd sdfsdfsdf</td>
+          <td class="table__row__content">{{attack.intruder_possibility}}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Уровень потенциала</td>
-          <td class="table__row__content">dsfsd sdfsdfsdf</td>
+          <td class="table__row__content"> ???? </td>
         </tr>
 
       </table>
@@ -106,10 +106,7 @@ export default {
   },
   methods: {
     getAttack() {
-      console.log(this.$route.params.id)
-      const attack = attacks.find(item => item.id === +this.$route.params.id)
-      console.log('CURRENT ATTACK', attack)
-      return attack
+      return attacks.find(item => item.id === +this.$route.params.id)
     }
   },
 }
@@ -127,14 +124,14 @@ export default {
   width: 1136px;
 
   &__name {
-    @include main-font-bold(36px);
+    @include main-font(36px, 700);
     margin-left: 20px;
     margin-bottom: 20px;
     color: $color-main;
   }
 
   &__id {
-    @include main-font-normal(24px);
+    @include main-font(24px, 300);
     margin-left: 20px;
 
     margin-bottom: 60px;
@@ -159,18 +156,19 @@ export default {
 
     &__title {
       color: $color-main;
-      @include main-font-bold(20px);
+      @include main-font(20px, 800);
       font-style: italic;
       padding-bottom: 15px;
     }
   }
 
   &__origins {
-    @include main-font-normal(20px);
-    font-style: italic;
+    @include main-font(24px, 600);
     color: $color-main;
 
     &__link {
+      @include main-font(20px, 400);
+      font-style: italic;
       color: black;
     }
   }
@@ -185,7 +183,7 @@ export default {
     min-height: 36px;
 
     &__name {
-      @include main-font-bold(20px);
+      @include main-font(20px, 800);
       font-style: italic;
       padding-right: 15px;
       color: $color-main;
@@ -193,7 +191,7 @@ export default {
     }
 
     &__content {
-      @include main-font-normal(20px);
+      @include main-font(20px, 500);
       padding: 6px 0 6px 36px;
 
       border-left: solid 0.5px $color-main;

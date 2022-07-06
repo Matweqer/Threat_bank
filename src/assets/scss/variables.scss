@@ -6,18 +6,13 @@ $background-color: #FFFFFF;
 
 $font-main: 'Raleway', sans-serif;
 
-@mixin main-font-normal($size) {
+@mixin main-font($size, $weight) {
   font-family: $font-main;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $weight;
   font-size: $size;
 }
-@mixin main-font-bold($size) {
-  font-family: $font-main;
-  font-style: normal;
-  font-weight: bold;
-  font-size: $size;
-}
+
 
 @mixin full-display {
   position: fixed;

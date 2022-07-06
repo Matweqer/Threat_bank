@@ -90,7 +90,7 @@ export default {
 @import 'src/assets/scss/index';
 
 .path {
-  @include main-font-normal(20px);
+  @include main-font(20px, 400);
 
   display: flex;
   justify-content: flex-start;

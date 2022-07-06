@@ -30,7 +30,7 @@ export default {
   &__item{
     margin: 0 20px;
     text-decoration: none;
-    @include main-font-normal(28px);
+    @include main-font(28px, 600);
     color: #000000;
   }
   &__item:hover {
@@ -42,7 +42,7 @@ export default {
   .nav {
     width: 1000px;
     &__item{
-      @include main-font-normal(24px);
+      @include main-font(24px, 600);
     }
   }
 }
@@ -50,7 +50,7 @@ export default {
   .nav {
     width: 700px;
     &__item{
-      @include main-font-normal(24px);
+      @include main-font(24px, 600);
     }
   }
 }
@@ -59,7 +59,7 @@ export default {
   .nav {
     width: 500px;
     &__item{
-      @include main-font-normal(18px);
+      @include main-font(18px, 600);
     }
   }
 }
@@ -67,7 +67,7 @@ export default {
   .nav {
     width: 320px;
     &__item{
-      @include main-font-normal(12px);
+      @include main-font(12px, 600);
     }
   }
 }

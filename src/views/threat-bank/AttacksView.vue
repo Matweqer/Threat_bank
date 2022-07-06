@@ -62,7 +62,7 @@ export default {
   }
 
   &__more {
-    @include main-font-normal(20px);
+    @include main-font(20px, 600);
     color: #FFFFFF;
     margin: 0 auto 165px;
     width: 171px;

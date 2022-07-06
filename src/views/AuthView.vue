@@ -38,14 +38,14 @@ export default {
     }
     &__title {
      margin-top: 130px;
-     @include main-font-normal(32px)
+     @include main-font(32px, 500)
    }
     &__question {
-      @include main-font-normal(16px);
+      @include main-font(16px, 400);
       margin-top: 47px;
     }
     &__registration {
-      @include main-font-normal(16px);
+      @include main-font(16px, 400);
       margin-top: 20px;
       color: #00126D;
       text-decoration: none;

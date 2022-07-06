@@ -59,13 +59,14 @@ export default {
 }
 .title {
   margin-left: 20px;
-  @include main-font-bold(40px)
+  @include main-font(48px, 500);
+  font-style: italic;
 }
 .text{
   width: 590px;
   height: 320px;
   margin-top: 134px;
-  @include main-font-normal(24px);
+  @include main-font(24px, 400);
   text-align: left;
   vertical-align: center;
 }

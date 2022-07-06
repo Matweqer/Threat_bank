@@ -47,15 +47,15 @@ export default {
   }
 
   &__num {
-    @include main-font-bold(72px)
+    @include main-font(72px, 700)
   }
 
   &__text {
-    @include main-font-normal(38px);
+    @include main-font(38px, 400);
   }
 
   &__back {
-    @include main-font-normal(32px);
+    @include main-font(32px, 400);
     transition: text-shadow 0.2s ease-out 0s;
 
     img {

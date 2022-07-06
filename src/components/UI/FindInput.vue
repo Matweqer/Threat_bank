@@ -31,7 +31,7 @@ export default {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     padding: 8px 26px;
-    @include main-font-normal(20px);
+    @include main-font(20px, 500);
     color: rgba(0, 0, 0, 0.2);
   }
 

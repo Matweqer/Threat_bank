@@ -27,7 +27,7 @@ export default {
   transition: text-shadow ease 150ms;
   &__text {
     color: $color-main;
-    @include main-font-normal(24px);
+    @include main-font(24px, 400);
     margin-right: 25px;
   }
   &__arrow {
