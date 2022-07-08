@@ -26,6 +26,7 @@
         <li
 
         >
+          <span class="list__item__color" :style="{background: getColor(item.impact_level)} " ></span>
           <span class="list__item__id"> А-{{ item.id }}.</span>
           <span class="list__item__name"> {{ item.name }} </span>
         </li>
@@ -46,6 +47,17 @@ export default {
     items: {
       type: Array,
       default: () => []
+    }
+  },
+  methods: {
+    getColor(level) {
+      switch (level) {
+        case 'Критичный': return '#FF1D1D'
+        case 'Высокий': return '#F9761D'
+        case 'Средний': return '#FAC712'
+        case 'Низкий': return '#0FD100'
+        default: return '#0FD100'
+      }
     }
   }
 }
@@ -93,14 +105,27 @@ li {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-
     padding-left: 24px;
-
     color: $color-main;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-bottom: 26px;
+    position: relative;
+    transition: transform 0.2s ease-out 0s;
 
-    transition: height 0.2s ease-out 0s, margin 0.3s ease-out 0s, padding-left 0.2s ease-out 0s;
+    &__color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 66px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 20px 0 0 20px;
+
+    }
 
     &__id {
+      margin-left: 44px;
       @include main-font(24px, 700)
     }
 
@@ -109,13 +134,7 @@ li {
       @include main-font(24px, 500)
     }
   }
-  &__item:hover {
-    height: 80px;
-    margin: 10px 0;
-    border-bottom: $color-main solid 4px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    padding-left: 48px;
-  }
+
   &__item:nth-child(odd) {
     background: rgba(90, 192, 102, 0.25);
   }

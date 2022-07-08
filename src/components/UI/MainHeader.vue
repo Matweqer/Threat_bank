@@ -24,7 +24,7 @@ export default {
   height: 60px;
   width: 100%;
   background-color: $color-main;
-  margin-bottom: 60px;
+  margin-bottom: 38px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

@@ -34,9 +34,15 @@ export default {
   flex: 0 1 auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .header{
     padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header{
+    padding-bottom: 30px;
   }
 }
 

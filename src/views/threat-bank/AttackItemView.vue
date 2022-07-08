@@ -3,7 +3,7 @@
 
   <div class="info">
     <div class="info__name">
-      {{attack.name}}
+      {{ attack.name }}
     </div>
 
     <div class="info__id">
@@ -35,7 +35,7 @@
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Характер воздействия сценария</td>
-          <td class="table__row__content">{{attack.impact_nature}}</td>
+          <td class="table__row__content">{{ attack.impact_nature }}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Инструментарий</td>
@@ -43,7 +43,7 @@
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Последствия</td>
-          <td class="table__row__content">{{attack.consequences.join(', ')}}</td>
+          <td class="table__row__content">{{ attack.consequences.join(', ') }}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Уровень влияния</td>
@@ -62,23 +62,23 @@
       <table class="info__intruder__table table">
         <tr class="table__row">
           <td class="table__row__name">Тип</td>
-          <td class="table__row__content"> ???? </td>
+          <td class="table__row__content"> ????</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Вид</td>
-          <td class="table__row__content">{{attack.intruder}}</td>
+          <td class="table__row__content">{{ attack.intruder }}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Мотив</td>
-          <td class="table__row__content">{{attack.intruder_motive}}</td>
+          <td class="table__row__content">{{ attack.intruder_motive }}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Возможности</td>
-          <td class="table__row__content">{{attack.intruder_possibility}}</td>
+          <td class="table__row__content">{{ attack.intruder_possibility }}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Уровень потенциала</td>
-          <td class="table__row__content"> ???? </td>
+          <td class="table__row__content"> ????</td>
         </tr>
 
       </table>
@@ -176,7 +176,6 @@ export default {
 }
 
 .table {
-  //border-collapse: collapse;
   border-spacing: 14px 0;
 
   &__row {
@@ -196,10 +195,6 @@ export default {
 
       border-left: solid 0.5px $color-main;
     }
-
-    //&__content:nth-child(even) {
-    //  background-color: rgba(90, 192, 102, 0.25);
-    //}
   }
 
   &__row:nth-child(odd) &__row__content {

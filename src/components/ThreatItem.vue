@@ -28,7 +28,7 @@ export default {
     },
     imgSrc: {
       type: String,
-      default: '../assets/images/threats-view/ThreatIcon.png',
+      default: '../assets/images/threats-view/attack.png',
     },
     subtitle: {
       type: String,
