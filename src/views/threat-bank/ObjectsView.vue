@@ -1,12 +1,12 @@
 <template>
-  <div class="sfc">
+  <div class="object">
     <CurrentPath></CurrentPath>
 
-    <div class="sfc__container">
+    <div class="object__container">
       <ItemsList
-          class="sfc__list"
-          itemsType="SFC"
-          :items="sfc"
+          class="object__list"
+          itemsType="О"
+          :items="objects"
       >
 
       </ItemsList>
@@ -22,17 +22,16 @@
 </template>
 
 <script>
-import sfc from "@/constants/sfc";
+import objects from "@/constants/objects";
 import ItemsList from "@/components/ItemsList";
-
 export default {
-  name: "SfcView",
+  name: "ObjectsView",
   components: {
     ItemsList
   },
   data() {
     return {
-      sfc
+      objects
     }
   }
 }
@@ -41,12 +40,13 @@ export default {
 <style lang="scss" scoped>
 @import 'src/assets/scss/index';
 
-.sfc {
+.object {
 
   margin: 0 auto;
   width: 1200px;
   &__container {
     @include flex-column-center
   }
+
 }
 </style>

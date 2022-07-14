@@ -11,6 +11,7 @@ $font-main: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 

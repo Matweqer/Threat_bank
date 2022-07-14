@@ -74,7 +74,7 @@ export default {
       images: {
         threat: '../assets/images/services-view/threat.png',
         intruder: '../assets/images/services-view/intruder.png',
-        vector: '../assets/images/services-view/Vector.png',
+        vector: '../assets/images/services-view/selectArrow.png',
       }
     }
   }

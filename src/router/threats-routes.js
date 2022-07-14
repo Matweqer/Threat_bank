@@ -25,6 +25,16 @@ export default [
         component: Views.SfcView
     },
     {
+        path: paths.sfcItem,
+        name: 'Элемент СФХ',
+        component: Views.SfcItemView
+    },
+    {
+        path: paths.objects,
+        name: 'Объекты',
+        component: Views.ObjectsView
+    },
+    {
         path: paths.object,
         name: 'Объект',
         component: Views.ObjectView

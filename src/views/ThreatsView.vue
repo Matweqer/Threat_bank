@@ -7,7 +7,7 @@
       <ThreatItem
           subtitle="Объект"
           :img-src="image.obj"
-          :link-to="links.object"
+          :link-to="links.objects"
       >
 
       </ThreatItem>

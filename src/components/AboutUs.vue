@@ -1,7 +1,7 @@
 <template>
   <div class="about-us">
     <div class="about-us__title">
-      <h2>О нас</h2>
+      <span>О нас</span>
     </div>
     <div class="about-us__container">
       <div class="about-us__left">
