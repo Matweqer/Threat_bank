@@ -1,7 +1,9 @@
 <template>
-  <BreadCrumbs class="attack-path" :page="{type: 'A', name: attack.name}"></BreadCrumbs>
 
-  <div class="info">
+  <CardLayout
+      class="info"
+      :page="{type: 'A', name: attack.name}"
+  >
     <div class="info__name">
       {{ attack.name }}
     </div>
@@ -10,7 +12,7 @@
       ID А. {{ attack.id }}
     </div>
 
-    <div class="info__images">
+    <section class="info__images">
       <div class="info__images__activity">
         <!--        graf -->
         <p class="info__images__activity__subtitle">Активность атаки за 3 года</p>
@@ -19,9 +21,9 @@
         <!--        logo -->
         <p class="info__images__logo__subtitle">Место для логотипов</p>
       </div>
-    </div>
+    </section>
 
-    <div class="info__attack">
+    <section class="info__attack">
       <p class="info__attack__title">Информация об атаке</p>
 
       <table class="info__attack__table table">
@@ -54,9 +56,9 @@
           <td class="table__row__content">{{ attack.archetypes }}</td>
         </tr>
       </table>
-    </div>
+    </section>
 
-    <div class="info__intruder">
+    <section class="info__intruder">
       <p class="info__intruder__title">Информация о нарушителе</p>
 
       <table class="info__intruder__table table">
@@ -82,22 +84,26 @@
         </tr>
 
       </table>
-    </div>
+    </section>
 
-    <div class="info__origins">
+    <section class="info__origins">
       Ссылки на источники:
       <a href="https://bdu.fstec.ru/threat" class="info__origins__link">https://bdu.fstec.ru/threat</a>
-    </div>
+    </section>
+  </CardLayout>
 
-  </div>
+
 </template>
 
 <script>
+import CardLayout from "@/layout/CardLayout";
 import attacks from '@/constants/attacks.js'
 
 export default {
   name: "AttackItemView",
-  components: {},
+  components: {
+    CardLayout
+  },
   props: {},
   data() {
     return {
@@ -115,13 +121,7 @@ export default {
 <style lang="scss" scoped>
 @import 'src/assets/scss/index';
 
-.attack-path {
-  margin-left: 106px;
-}
-
 .info {
-  margin: 96px auto 197px;
-  width: 1136px;
 
   &__name {
     @include main-font(36px, 700);

@@ -1,35 +1,32 @@
 <template>
+  <ListLayout>
+    <ItemsList
+        class="attacks__list"
+        itemsType="А"
+        :items="attacks"
+    >
 
-  <div class="attacks">
-    <BreadCrumbs></BreadCrumbs>
-
-    <div class="attacks__container">
-      <ItemsList
-          class="attacks__list"
-          itemsType="А"
-          :items="attacks"
-      >
-
-      </ItemsList>
-
-
-    </div>
-
-  </div>
+    </ItemsList>
+  </ListLayout>
 
   <router-view>
 
   </router-view>
+
 </template>
 
 <script>
 import ItemsList from "@/components/ItemsList";
+import ListLayout from "@/layout/ListLayout";
 
 import attacks from '@/constants/attacks.js'
 
 
 export default {
-  components: {ItemsList},
+  components: {
+    ItemsList,
+    ListLayout,
+  },
   name: "AttacksView",
   data() {
     return {
@@ -43,15 +40,10 @@ export default {
 <style lang="scss" scoped>
 @import 'src/assets/scss/index';
 
-
 .attacks {
-  margin: 0 auto;
-  width: 1200px;
+
 
   &__container {
-    width: 1060px;
-    margin: 0 auto;
-    @include flex-column-center;
 
   }
 
