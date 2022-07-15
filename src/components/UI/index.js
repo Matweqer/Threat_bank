@@ -2,7 +2,7 @@ import MainHeader from "@/components/UI/MainHeader";
 import LinkTo from "@/components/UI/LinkTo";
 import MainFooter from "@/components/UI/MainFooter";
 import MainNavBar from "@/components/UI/MainNavBar";
-import CurrentPath from "@/components/UI/CurrentPath";
+import BreadCrumbs from "@/components/UI/BreadCrumbs";
 import FindInput from "@/components/UI/FindInput";
 import PaginationCount from "@/components/UI/PaginationCount";
 
@@ -12,7 +12,7 @@ export default [
     LinkTo,
     MainFooter,
     MainNavBar,
-    CurrentPath,
+    BreadCrumbs,
     FindInput,
     PaginationCount
 ]

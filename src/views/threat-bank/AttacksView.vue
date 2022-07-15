@@ -1,7 +1,7 @@
 <template>
 
   <div class="attacks">
-    <CurrentPath></CurrentPath>
+    <BreadCrumbs></BreadCrumbs>
 
     <div class="attacks__container">
       <ItemsList

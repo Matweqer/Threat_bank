@@ -1,5 +1,5 @@
 <template>
-  <MainWrap>
+  <DefaultLayout>
     <div class="home">
       <img class="home__desktop" src="../assets/images/home-view/desktop.png" alt="desktop">
       <AboutUs class="home__about"></AboutUs>
@@ -52,11 +52,11 @@
         </InfoSection>
       </div>
     </div>
-  </MainWrap>
+  </DefaultLayout>
 </template>
 
 <script>
-import MainWrap from "@/ViewWrap/MainWrap";
+import DefaultLayout from "@/layout/DefaultLayout";
 import AboutUs from "@/components/AboutUs";
 import InfoSection from "@/components/InfoSection";
 
@@ -66,7 +66,7 @@ import paths from "@/constants/paths";
 export default {
   name: "HomeView",
   components: {
-    MainWrap,
+    DefaultLayout,
     AboutUs,
     InfoSection,
   },

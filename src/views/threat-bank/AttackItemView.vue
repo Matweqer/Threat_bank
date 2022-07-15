@@ -1,5 +1,5 @@
 <template>
-  <CurrentPath class="attack-path" :page="{type: 'A', name: attack.name}"></CurrentPath>
+  <BreadCrumbs class="attack-path" :page="{type: 'A', name: attack.name}"></BreadCrumbs>
 
   <div class="info">
     <div class="info__name">

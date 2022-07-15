@@ -15,14 +15,13 @@
 <script>
 
 export default {
-  components: {
-  },
-  name: "HomePage"
+
+  name: "DefaultLayout"
 }
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/index.scss';
+@import '../assets/scss/index';
 
 .header {
   @include flex-column-center;

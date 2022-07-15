@@ -1,6 +1,6 @@
 <template>
   <div class="object">
-    <CurrentPath></CurrentPath>
+    <BreadCrumbs></BreadCrumbs>
 
     <div class="object__container">
       <ItemsList

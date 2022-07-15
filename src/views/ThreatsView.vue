@@ -1,6 +1,6 @@
 <template>
-  <MainWrap>
-    <div
+  <DefaultLayout>
+    <section
         class="threats"
         v-if="$route.path === '/threats-bank' "
     >
@@ -61,27 +61,28 @@
 
       </ThreatItem>
 
-    </div>
-    <div
+    </section>
+
+    <section
         class="threat"
         v-else
     >
       <router-view>
 
       </router-view>
-    </div>
-  </MainWrap>
+    </section>
+  </DefaultLayout>
 </template>
 
 <script>
-import MainWrap from "@/ViewWrap/MainWrap";
+import DefaultLayout from "@/layout/DefaultLayout";
 import ThreatItem from "@/components/ThreatItem";
 import paths from "@/constants/paths";
 
 
 export default {
   components: {
-    MainWrap,
+    DefaultLayout,
     ThreatItem
   },
   name: "ThreatsView",

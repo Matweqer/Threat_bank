@@ -1,6 +1,6 @@
 <template>
-  <MainWrap>
-    <div
+  <DefaultLayout>
+    <section
         class="services"
         v-if="$route.path === '/services' "
     >
@@ -41,21 +41,21 @@
 
       </ServiceItem>
 
-    </div>
+    </section>
 
-    <div
+    <section
         class="service"
         v-else
     >
       <router-view>
 
       </router-view>
-    </div>
-  </MainWrap>
+    </section>
+  </DefaultLayout>
 </template>
 
 <script>
-import MainWrap from "@/ViewWrap/MainWrap";
+import DefaultLayout from "@/layout/DefaultLayout";
 import ServiceItem from "@/components/ServiceItem";
 
 import paths from "@/constants/paths";
@@ -63,7 +63,7 @@ import paths from "@/constants/paths";
 export default {
   name: "ServicesView",
   components: {
-    MainWrap,
+    DefaultLayout,
     ServiceItem,
   },
   data() {
