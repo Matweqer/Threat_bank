@@ -8,16 +8,22 @@
     >
     </FindInput>
 
-    <div class="sort">
-      Сортировать по:
-      <select id="" class="sort__by">
-        <option class="sort__by__option" value="increasing">возрастанию</option>
-        <option class="sort__by__option" value="decreasing">убыванию</option>
-      </select>
-      <span class="sort__arrow">
+    <div class="settings">
+<!--        TODO change this-->
+      <div class="sort">
+        Сортировать по:
+        <select id="" class="sort__by">
+          <option class="sort__by__option" value="increasing">возрастанию</option>
+          <option class="sort__by__option" value="decreasing">убыванию</option>
+        </select>
+        <span class="sort__arrow">
         <img src="../assets/images/icons/selectArrow.png" alt="">
-      </span>
+        </span>
+      </div>
+
+      <PaginationCount class="pagination" ></PaginationCount>
     </div>
+
 
     <ul
         class="list"
@@ -50,7 +56,6 @@
 export default {
   name: "ItemsList",
   components: {},
-
   props: {
     itemsType: {
       type: String,
@@ -84,18 +89,20 @@ export default {
 <style lang="scss" scoped>
 @import 'src/assets/scss/index';
 
-li {
-  list-style-type: none;
-}
-
-
 .input {
   margin-top: 50px;
 }
 
+.settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 65px;
+}
+
 .sort {
   padding-left: 32px;
-  margin-top: 65px;
+
   @include main-font(20px, 500);
   display: flex;
   align-items: center;
@@ -133,6 +140,10 @@ li {
   }
 }
 
+.pagination {
+  margin-left: 60px;
+}
+
 .list {
   margin-top: 32px;
 
@@ -151,7 +162,7 @@ li {
     border-radius: 20px;
     margin-bottom: 26px;
     position: relative;
-    transition: transform 0.2s ease-out 0s;
+
 
     &__color {
       position: absolute;
@@ -161,12 +172,14 @@ li {
       height: 66px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       border-radius: 20px 0 0 20px;
-
+      transition: width 0.2s ease-out 0s;
     }
+
 
     &__id {
       margin-left: 44px;
-      @include main-font(24px, 700)
+      @include main-font(24px, 700);
+      transition: color 0.1s ease-out 0.1s;
     }
 
     &__name {
@@ -175,6 +188,25 @@ li {
     }
 
   }
+
+  &__item:hover {
+    background: rgba(41, 150, 54, 0.25);
+  }
+  //&__item:hover &__item__color{
+  //  width: 40px;
+  //}
+  &__item:hover {
+
+  }
+  //&__item:hover &__item__color{
+  //  width: 100px;
+  //}
+  //&__item:hover &__item__id{
+  //  position: relative;
+  //  z-index: 10;
+  //  color: #FFFFFF;
+  //}
+
 
   &__more {
     @include main-font(20px, 600);
@@ -197,9 +229,6 @@ li {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   }
 
-  &__item:nth-child(odd) {
-    background: rgba(90, 192, 102, 0.25);
-  }
 }
 
 .no-items {

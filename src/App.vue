@@ -15,6 +15,7 @@ export default {
 <style lang="scss" >
 @import  'src/assets/scss/index.scss';
 
+
 ::-webkit-scrollbar {
   width: 12px; /* ширина для вертикального скролла */
   background-color: $background-color;
@@ -42,6 +43,11 @@ export default {
 body {
   background-color: $background-color;
 }
+
+li {
+  list-style-type: none;
+}
+
 
 
 </style>

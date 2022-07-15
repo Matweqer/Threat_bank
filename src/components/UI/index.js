@@ -4,6 +4,8 @@ import MainFooter from "@/components/UI/MainFooter";
 import MainNavBar from "@/components/UI/MainNavBar";
 import CurrentPath from "@/components/UI/CurrentPath";
 import FindInput from "@/components/UI/FindInput";
+import PaginationCount from "@/components/UI/PaginationCount";
+
 
 export default [
     MainHeader,
@@ -11,5 +13,6 @@ export default [
     MainFooter,
     MainNavBar,
     CurrentPath,
-    FindInput
+    FindInput,
+    PaginationCount
 ]
