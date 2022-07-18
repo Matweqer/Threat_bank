@@ -1,0 +1,56 @@
+@import "../index";
+
+.info {
+
+  &__name {
+    @include main-font(36px, 700);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: $color-main;
+  }
+
+  &__id {
+    @include main-font(24px, 300);
+    margin-left: 20px;
+
+    margin-bottom: 60px;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 93px;
+
+    &__activity, &__logo {
+      @include flex-column-center;
+      width: 518px;
+      height: 290px;
+      background: #EDEDED;
+    }
+  }
+
+  &__item {
+    @include flex-column-center;
+    margin-bottom: 118px;
+
+    &__title {
+      color: $color-main;
+      @include main-font(20px, 800);
+      font-style: italic;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__origins {
+    @include main-font(24px, 600);
+    color: $color-main;
+
+    &__link {
+      @include main-font(20px, 400);
+      font-style: italic;
+      color: black;
+    }
+  }
+
+}
+

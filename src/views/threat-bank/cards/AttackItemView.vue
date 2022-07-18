@@ -23,8 +23,8 @@
       </div>
     </section>
 
-    <section class="info__attack">
-      <p class="info__attack__title">Информация об атаке</p>
+    <section class="info__attack info__item">
+      <p class="info__item__title">Информация об атаке</p>
 
       <table class="info__attack__table table">
         <tr class="table__row">
@@ -58,8 +58,8 @@
       </table>
     </section>
 
-    <section class="info__intruder">
-      <p class="info__intruder__title">Информация о нарушителе</p>
+    <section class="info__intruder info__item">
+      <p class="info__item__title">Информация о нарушителе</p>
 
       <table class="info__intruder__table table">
         <tr class="table__row">
@@ -115,88 +115,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'src/assets/scss/index';
+@import '../../../assets/scss/index';
 
-.info {
+// card style pattern
+@import '../../../assets/scss/modules/cardInfo';
+@import '../../../assets/scss/modules/table';
 
-  &__name {
-    @include main-font(36px, 700);
-    margin-left: 20px;
-    margin-bottom: 20px;
-    color: $color-main;
-  }
-
-  &__id {
-    @include main-font(24px, 300);
-    margin-left: 20px;
-
-    margin-bottom: 60px;
-  }
-
-  &__images {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 93px;
-
-    &__activity, &__logo {
-      @include flex-column-center;
-      width: 518px;
-      height: 290px;
-      background: #EDEDED;
-    }
-  }
-
-  &__attack, &__intruder {
-    @include flex-column-center;
-    margin-bottom: 118px;
-
-    &__title {
-      color: $color-main;
-      @include main-font(20px, 800);
-      font-style: italic;
-      padding-bottom: 15px;
-    }
-  }
-
-  &__origins {
-    @include main-font(24px, 600);
-    color: $color-main;
-
-    &__link {
-      @include main-font(20px, 400);
-      font-style: italic;
-      color: black;
-    }
-  }
-
-}
-
-.table {
-  border-spacing: 14px 0;
-
-  &__row {
-    min-height: 36px;
-
-    &__name {
-      @include main-font(20px, 800);
-      font-style: italic;
-      padding-right: 15px;
-      color: $color-main;
-      border-bottom: 0.5px solid $color-main;
-    }
-
-    &__content {
-      @include main-font(20px, 500);
-      padding: 6px 0 6px 36px;
-
-      border-left: solid 0.5px $color-main;
-    }
-  }
-
-  &__row:nth-child(odd) &__row__content {
-    background-color: rgba(90, 192, 102, 0.25);
-  }
-}
 
 .info__attack__table .table {
   &__row {
@@ -221,4 +145,5 @@ export default {
     }
   }
 }
+
 </style>

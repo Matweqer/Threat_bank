@@ -35,7 +35,7 @@
           :to="`${$route.path}/${item.id}`"
       >
         <li>
-          <span class="list__item__color" :style="{background: getColor(item.impact_level)} "></span>
+          <span class="list__item__color" :style="{background: getColor( item )} "></span>
           <span class="list__item__id"> {{ itemsType }}-{{ item.id }}.</span>
           <span class="list__item__name"> {{ item.name }} </span>
         </li>
@@ -67,7 +67,8 @@ export default {
     }
   },
   methods: {
-    getColor(level) {
+    getColor(item) {
+      const level = item.impact_level || item.criticality_level || item.destabilization_level
       switch (level) {
         case 'Критичный':
         case 3:

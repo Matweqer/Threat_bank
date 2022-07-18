@@ -1,0 +1,27 @@
+@import "../index";
+
+.table {
+  border-spacing: 14px 0;
+
+  &__row {
+    min-height: 36px;
+
+    &__name {
+      @include main-font(20px, 800);
+      font-style: italic;
+      padding-right: 15px;
+      color: $color-main;
+      border-bottom: 0.5px solid $color-main;
+    }
+
+    &__content {
+      @include main-font(20px, 500);
+      padding: 6px 0 6px 36px;
+      border-left: solid 0.5px $color-main;
+    }
+  }
+
+  &__row:nth-child(odd) &__row__content {
+    background-color: rgba(90, 192, 102, 0.25);
+  }
+}
