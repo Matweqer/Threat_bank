@@ -1,32 +1,30 @@
 <template>
-  <div class="object">
-    <BreadCrumbs></BreadCrumbs>
+  <ListLayout>
+    <ItemsList
+        class="object__list"
+        itemsType="О"
+        :items="objects"
+    >
 
-    <div class="object__container">
-      <ItemsList
-          class="object__list"
-          itemsType="О"
-          :items="objects"
-      >
-
-      </ItemsList>
-
-
-    </div>
-
+    </ItemsList>
 
     <router-view>
 
     </router-view>
-  </div>
+
+  </ListLayout>
+
 </template>
 
 <script>
 import objects from "@/constants/objects";
+import ListLayout from "@/layout/ListLayout";
 import ItemsList from "@/components/ItemsList";
+
 export default {
   name: "ObjectsView",
   components: {
+    ListLayout,
     ItemsList
   },
   data() {
@@ -44,6 +42,7 @@ export default {
 
   margin: 0 auto;
   width: 1200px;
+
   &__container {
     @include flex-column-center
   }

@@ -70,13 +70,20 @@ export default {
     getColor(level) {
       switch (level) {
         case 'Критичный':
+        case 3:
           return '#FF1D1D'
+
         case 'Высокий':
+        case 2:
           return '#F9761D'
+
         case 'Средний':
+        case 1:
           return '#FAC712'
         case 'Низкий':
+        case 0:
           return '#0FD100'
+
         default:
           return '#0FD100'
       }
@@ -192,12 +199,11 @@ export default {
   &__item:hover {
     background: rgba(41, 150, 54, 0.25);
   }
+
   //&__item:hover &__item__color{
   //  width: 40px;
   //}
-  &__item:hover {
 
-  }
   //&__item:hover &__item__color{
   //  width: 100px;
   //}
@@ -211,7 +217,7 @@ export default {
   &__more {
     @include main-font(20px, 600);
     display: block;
-    margin: 154px auto 146px;
+    margin: 52px auto 146px;
     width: 171px;
     height: 40px;
     background: rgba(41, 150, 54, 0.5);

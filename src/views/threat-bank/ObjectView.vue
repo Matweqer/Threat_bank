@@ -1,12 +1,30 @@
 <template>
-  <div class="">
-  {{$route.params.id}}
-  </div>
+
+  <CardLayout
+      class="info"
+      :page="{type: 'O', name: object.name}"
+  >
+
+
+  </CardLayout>
+
 </template>
 
 <script>
+import CardLayout from "@/layout/CardLayout";
+import {getItemById} from "@/controller/data";
+import objects from "@/constants/objects";
+
 export default {
-  name: "ObjectView"
+  name: "ObjectView",
+  components: {
+    CardLayout
+  },
+  data() {
+    return {
+      object: getItemById(objects, this.$route.params.id)
+    }
+  },
 }
 </script>
 

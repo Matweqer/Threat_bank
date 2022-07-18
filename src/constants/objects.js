@@ -12,7 +12,7 @@ const objects = [
     {
         id: 3,
         name: 'test_228',
-        impact_level: 2
+        impact_level: 3
     },
     {
         id: 4,

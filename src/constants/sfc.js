@@ -7,7 +7,7 @@ const sfc = [
     {
         id: 2,
         name: 'TEST',
-        impact_level: 1
+        impact_level: 3
     },
     {
         id: 3,

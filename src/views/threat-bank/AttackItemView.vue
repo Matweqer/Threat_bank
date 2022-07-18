@@ -97,6 +97,8 @@
 
 <script>
 import CardLayout from "@/layout/CardLayout";
+
+import {getItemById} from "@/controller/data";
 import attacks from '@/constants/attacks.js'
 
 export default {
@@ -104,15 +106,9 @@ export default {
   components: {
     CardLayout
   },
-  props: {},
   data() {
     return {
-      attack: this.getAttack(),
-    }
-  },
-  methods: {
-    getAttack() {
-      return attacks.find(item => item.id === +this.$route.params.id)
+      attack: getItemById(attacks, this.$route.params.id)
     }
   },
 }
