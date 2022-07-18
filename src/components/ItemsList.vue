@@ -68,7 +68,10 @@ export default {
   },
   methods: {
     getColor(item) {
-      const level = item.impact_level || item.criticality_level || item.destabilization_level
+      const level = item.impact_level
+          || item.criticality_level
+          || item.destabilization_level
+          || item.danger_degree
       switch (level) {
         case 'Критичный':
         case 3:

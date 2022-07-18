@@ -1,9 +1,9 @@
 <template>
   <ListLayout>
     <ItemsList
-        class="attacks__list"
-        itemsType="А"
-        :items="attacks"
+        class="threats__list"
+        itemsType="T"
+        :items="threats"
     >
 
     </ItemsList>
@@ -19,7 +19,7 @@
 import ItemsList from "@/components/ItemsList";
 import ListLayout from "@/layout/ListLayout";
 
-import attacks from '@/constants/attacks.js'
+import threats from "@/constants/threats";
 
 export default {
   components: {
@@ -29,7 +29,7 @@ export default {
   name: "AttacksView",
   data() {
     return {
-      attacks
+      threats
     }
   },
 }
@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 @import 'src/assets/scss/index';
 
-.attacks {
+.threats {
   &__list {
     margin-bottom: 66px;
   }

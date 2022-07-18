@@ -56,7 +56,7 @@
       <ThreatItem
           subtitle="Угрозы"
           :img-src="image.threat"
-          :link-to="links.countermeasures"
+          :link-to="links.threats"
       >
 
       </ThreatItem>
@@ -85,7 +85,7 @@ export default {
     DefaultLayout,
     ThreatItem
   },
-  name: "ThreatsView",
+  name: "ThreatsBankView",
   data() {
     return {
       image: {
@@ -100,7 +100,7 @@ export default {
       },
       links: {
         ...paths
-      },
+      }
     }
   }
 }

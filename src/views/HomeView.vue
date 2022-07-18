@@ -40,7 +40,7 @@
             style=""
             class="home__threats"
             :img-src="image.threat"
-            :link="links.threats">
+            :link="links.threatsBank">
           <template v-slot:title>База данных угроз</template>
           <template v-slot:text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом

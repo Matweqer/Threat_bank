@@ -1,40 +1,29 @@
 <template>
-
   <CardLayout
       class="info"
-      :page="{type: 'O', name: object.name}"
+      :page="{type: 'С', name: countermeasure.name}"
   >
-
     <div class="info__name">
-      {{ object.name }}
+      {{ countermeasure.name }}
     </div>
 
     <div class="info__id">
-      ID O. {{ object.id }}
+      ID С. {{ countermeasure.id }}
     </div>
 
-    <section class="info__object info__item">
-      
-      <table class="info__object__table table">
+    <section class="info__sfc info__item">
+      <table class="info__sfc__table table">
         <tr class="table__row">
           <td class="table__row__name">Описание</td>
-          <td class="table__row__content">{{ object.description }}</td>
+          <td class="table__row__content">{{ countermeasure.description }}</td>
         </tr>
         <tr class="table__row">
-          <td class="table__row__name">Домен</td>
-          <td class="table__row__content">{{ object.domain }}</td>
-        </tr>
-        <tr class="table__row">
-          <td class="table__row__name">Характеристики</td>
-          <td class="table__row__content">{{ object.characteristics.join(', ') }}</td>
-        </tr>
-        <tr class="table__row">
-          <td class="table__row__name">Уровень критичности</td>
-          <td class="table__row__content">{{ object.criticality_level }}</td>
+          <td class="table__row__name">Угроза</td>
+          <td class="table__row__content">{{ countermeasure.threat }}</td>
         </tr>
         <tr class="table__row">
           <td class="table__row__name">Архетипы</td>
-          <td class="table__row__content">{{ object.archetypes }}</td>
+          <td class="table__row__content">{{ countermeasure.archetypes }}</td>
         </tr>
       </table>
     </section>
@@ -43,14 +32,14 @@
       Ссылки на источники:
       <a href="https://bdu.fstec.ru/threat" class="info__origins__link">https://bdu.fstec.ru/threat</a>
     </section>
-  </CardLayout>
 
+  </CardLayout>
 </template>
 
 <script>
 import CardLayout from "@/layout/CardLayout";
 import {getItemById} from "@/controller/data";
-import objects from "@/constants/objects";
+import countermeasures from "@/constants/countermeasures";
 
 export default {
   name: "ObjectView",
@@ -59,7 +48,7 @@ export default {
   },
   data() {
     return {
-      object: getItemById(objects, this.$route.params.id)
+      countermeasure: getItemById(countermeasures, this.$route.params.id)
     }
   },
 }
@@ -72,16 +61,15 @@ export default {
 @import '../../../assets/scss/modules/cardInfo';
 @import '../../../assets/scss/modules/table';
 
-.info__object__table .table {
+.info__sfc__table .table {
   &__row {
     &__name {
-      width: 250px;
+      width: 279px;
     }
 
     &__content {
-      width: 877px;
+      width: 832px;
     }
   }
 }
-
 </style>

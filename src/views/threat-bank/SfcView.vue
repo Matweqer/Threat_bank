@@ -1,33 +1,30 @@
 <template>
-  <div class="sfc">
-    <CurrentPath></CurrentPath>
+  <ListLayout>
+    <ItemsList
+        class="sfc__list"
+        itemsType="SFC"
+        :items="sfc"
+    >
 
-    <div class="sfc__container">
-      <ItemsList
-          class="sfc__list"
-          itemsType="SFC"
-          :items="sfc"
-      >
-
-      </ItemsList>
-
-
-    </div>
-
+    </ItemsList>
 
     <router-view>
 
     </router-view>
-  </div>
+  </ListLayout>
+
 </template>
 
 <script>
-import sfc from "@/constants/sfc";
+import ListLayout from "@/layout/ListLayout";
 import ItemsList from "@/components/ItemsList";
+
+import sfc from "@/constants/sfc";
 
 export default {
   name: "SfcView",
   components: {
+    ListLayout,
     ItemsList
   },
   data() {
@@ -42,11 +39,8 @@ export default {
 @import 'src/assets/scss/index';
 
 .sfc {
-
-  margin: 0 auto;
-  width: 1200px;
-  &__container {
-    @include flex-column-center
+  &__list {
+    margin-bottom: 66px;
   }
 }
 </style>

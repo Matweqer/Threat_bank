@@ -12,7 +12,6 @@
     </div>
 
     <section class="info__sfc info__item">
-      <p class="info__item__title">Информация об атаке</p>
 
       <table class="info__sfc__table table">
         <tr class="table__row">

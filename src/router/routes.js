@@ -30,9 +30,9 @@ const routes = [
         children: ServicesRoutes
     },
     {
-        path: paths.threats,
+        path: paths.threatsBank,
         name: 'База данных угроз',
-        component: Views.ThreatsView,
+        component: Views.ThreatsBankView,
         children: ThreatsRoutes,
     },
     {
