@@ -1,18 +1,13 @@
 <template>
   <div class="container">
-
     <BreadCrumbs
-        :page="page"
-    >
-    </BreadCrumbs>
+      :page="page"
+    />
 
     <div class="container__inner">
-      <slot>
-
-      </slot>
+      <slot />
     </div>
   </div>
-
 </template>
 
 <script>

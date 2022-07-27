@@ -1,23 +1,18 @@
 <template>
   <ListLayout>
     <ItemsList
-        class="sfc__list"
-        itemsType="SFC"
-        :items="sfc"
-    >
+      class="sfc__list"
+      items-type="SFC"
+      :items="sfc"
+    />
 
-    </ItemsList>
-
-    <router-view>
-
-    </router-view>
+    <router-view />
   </ListLayout>
-
 </template>
 
 <script>
 import ListLayout from "@/layout/ListLayout";
-import ItemsList from "@/components/ItemsList";
+import ItemsList from "@/pages/threat-bank/ItemsList";
 
 import sfc from "@/constants/sfc";
 

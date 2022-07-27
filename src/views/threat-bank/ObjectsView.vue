@@ -1,25 +1,19 @@
 <template>
   <ListLayout>
     <ItemsList
-        class="object__list"
-        itemsType="О"
-        :items="objects"
-    >
+      class="object__list"
+      items-type="О"
+      :items="objects"
+    />
 
-    </ItemsList>
-
-    <router-view>
-
-    </router-view>
-
+    <router-view />
   </ListLayout>
-
 </template>
 
 <script>
 import objects from "@/constants/objects";
 import ListLayout from "@/layout/ListLayout";
-import ItemsList from "@/components/ItemsList";
+import ItemsList from "@/pages/threat-bank/ItemsList";
 
 export default {
   name: "ObjectsView",

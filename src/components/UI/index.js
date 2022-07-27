@@ -6,13 +6,12 @@ import BreadCrumbs from "@/components/UI/BreadCrumbs";
 import FindInput from "@/components/UI/FindInput";
 import PaginationCount from "@/components/UI/PaginationCount";
 
-
 export default [
-    MainHeader,
-    LinkTo,
-    MainFooter,
-    MainNavBar,
-    BreadCrumbs,
-    FindInput,
-    PaginationCount
-]
+  MainHeader,
+  LinkTo,
+  MainFooter,
+  MainNavBar,
+  BreadCrumbs,
+  FindInput,
+  PaginationCount,
+];

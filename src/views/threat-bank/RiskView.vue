@@ -1,32 +1,27 @@
 <template>
   <ListLayout>
     <ItemsList
-        class="risk__list"
-        itemsType="R"
-        :items="risks"
-    >
-
-    </ItemsList>
+      class="risk__list"
+      items-type="R"
+      :items="risks"
+    />
   </ListLayout>
 
-  <router-view>
-
-  </router-view>
-
+  <router-view />
 </template>
 
 <script>
-import ItemsList from "@/components/ItemsList";
+import ItemsList from "@/pages/threat-bank/ItemsList";
 import ListLayout from "@/layout/ListLayout";
 
 import risks from '@/constants/risks.js'
 
 export default {
+  name: "AttacksView",
   components: {
     ItemsList,
     ListLayout,
   },
-  name: "AttacksView",
   data() {
     return {
       risks

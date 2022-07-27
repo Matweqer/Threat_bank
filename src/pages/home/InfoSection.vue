@@ -1,17 +1,20 @@
 <template>
   <section class="container">
     <div class="left">
-      <img :src="imgSrc" alt="image">
+      <img
+        :src="imgSrc"
+        alt="image"
+      >
     </div>
     <div class="right">
       <h2 class="title">
-        <slot name="title"></slot>
+        <slot name="title" />
       </h2>
       <p class="text">
-        <slot name="text"></slot>
+        <slot name="text" />
       </p>
       <LinkTo :to="link">
-        <slot name="link"></slot>
+        <slot name="link" />
       </LinkTo>
     </div>
   </section>
@@ -20,9 +23,9 @@
 <script>
 
 export default {
+  name: "InfoSection",
   components: {
   },
-  name: "InfoSection",
   props: {
     link: {
       type: String,
@@ -37,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/index.scss';
+@import '../../assets/scss/index';
 
 .container {
   background: $background-color;

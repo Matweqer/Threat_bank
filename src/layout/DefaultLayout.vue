@@ -1,15 +1,14 @@
 <template>
   <header class="header">
-    <MainHeader class="header__head"></MainHeader>
-    <MainNavBar class="header__nav"></MainNavBar>
+    <MainHeader class="header__head" />
+    <MainNavBar class="header__nav" />
   </header>
   <main class="main">
-    <slot></slot>
+    <slot />
   </main>
   <footer>
-    <MainFooter class="footer"></MainFooter>
+    <MainFooter class="footer" />
   </footer>
-
 </template>
 
 <script>

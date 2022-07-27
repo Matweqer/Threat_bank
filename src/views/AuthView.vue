@@ -1,17 +1,28 @@
 <template>
   <div class="auth">
-    <img class="auth__img" src="@/assets/images/auth-page/auth-bg.png" alt="background">
+    <img
+      class="auth__img"
+      src="@/assets/images/auth-page/auth-bg.png"
+      alt="background"
+    >
     <div class="auth__container">
-      <h1 class="auth__title">Вход в систему</h1>
-      <AuthForm class="auth__form"></AuthForm>
-      <p class="auth__question">Вы еще не зарегистрированы?</p>
-      <a class="auth__registration" href="">Зарегистрироваться</a>
+      <h1 class="auth__title">
+        Вход в систему
+      </h1>
+      <AuthForm class="auth__form" />
+      <p class="auth__question">
+        Вы еще не зарегистрированы?
+      </p>
+      <a
+        class="auth__registration"
+        href=""
+      >Зарегистрироваться</a>
     </div>
   </div>
 </template>
 
 <script>
-import AuthForm from "@/components/AuthForm";
+import AuthForm from "@/pages/auth/AuthForm";
 
 export default {
   name: "AuthView",

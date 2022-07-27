@@ -1,41 +1,59 @@
 <template>
   <div
-      class="container"
-      v-if="!!items"
+    v-if="!!items"
+    class="container"
   >
     <FindInput
-        class="input"
-    >
-    </FindInput>
+      class="input"
+    />
 
     <div class="settings">
-<!--        TODO change this-->
+      <!--        TODO make custom select-->
       <div class="sort">
         Сортировать по:
-        <select id="" class="sort__by">
-          <option class="sort__by__option" value="increasing">возрастанию</option>
-          <option class="sort__by__option" value="decreasing">убыванию</option>
+        <select
+          id=""
+          class="sort__by"
+        >
+          <option
+            class="sort__by__option"
+            value="increasing"
+          >
+            возрастанию
+          </option>
+          <option
+            class="sort__by__option"
+            value="decreasing"
+          >
+            убыванию
+          </option>
         </select>
         <span class="sort__arrow">
-        <img src="../assets/images/icons/selectArrow.png" alt="">
+          <img
+            src="../../assets/images/icons/selectArrow.png"
+            alt=""
+          >
         </span>
       </div>
 
-      <PaginationCount class="pagination" ></PaginationCount>
+      <PaginationCount class="pagination" />
     </div>
 
 
     <ul
-        class="list"
+      class="list"
     >
       <router-link
-          class="list__item"
-          v-for="item in items"
-          :key="item.id"
-          :to="`${$route.path}/${item.id}`"
+        v-for="item in items"
+        :key="item.id"
+        class="list__item"
+        :to="`${$route.path}/${item.id}`"
       >
         <li>
-          <span class="list__item__color" :style="{background: getColor( item )} "></span>
+          <span
+            class="list__item__color"
+            :style="{background: getColor( item )} "
+          />
           <span class="list__item__id"> {{ itemsType }}-{{ item.id }}.</span>
           <span class="list__item__name"> {{ item.name }} </span>
         </li>
@@ -44,12 +62,14 @@
       <button class="list__more">
         Показать ещё
       </button>
-
     </ul>
-
   </div>
-  <div class="no-items" v-else> Ошибка загрузки данных, обновите станицу или попробуйте позднее</div>
-
+  <div
+    v-else
+    class="no-items"
+  >
+    Ошибка загрузки данных, обновите станицу или попробуйте позднее
+  </div>
 </template>
 
 <script>
@@ -98,7 +118,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'src/assets/scss/index';
+@import '../../assets/scss/index';
 
 .input {
   margin-top: 50px;

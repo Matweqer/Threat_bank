@@ -1,14 +1,19 @@
 <template>
   <label class="find">
     <input
-        class="find__input"
-        placeholder="Введите название, ID или ключевые слова"
+      class="find__input"
+      placeholder="Введите название, ID или ключевые слова"
     >
     <span class="find__icon">
-      <img class="find__icon__img" src="@/assets/images/icons/find.png" alt="find">
+      <img
+        class="find__icon__img"
+        src="@/assets/images/icons/find.png"
+        alt="find"
+      >
     </span>
   </label>
 </template>
+
 
 <script>
 export default {

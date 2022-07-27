@@ -1,32 +1,27 @@
 <template>
   <ListLayout>
     <ItemsList
-        class="threats__list"
-        itemsType="T"
-        :items="threats"
-    >
-
-    </ItemsList>
+      class="threats__list"
+      items-type="T"
+      :items="threats"
+    />
   </ListLayout>
 
-  <router-view>
-
-  </router-view>
-
+  <router-view />
 </template>
 
 <script>
-import ItemsList from "@/components/ItemsList";
+import ItemsList from "@/pages/threat-bank/ItemsList";
 import ListLayout from "@/layout/ListLayout";
 
 import threats from "@/constants/threats";
 
 export default {
+  name: "AttacksView",
   components: {
     ItemsList,
     ListLayout,
   },
-  name: "AttacksView",
   data() {
     return {
       threats

@@ -1,12 +1,24 @@
 <template>
   <nav class="nav">
-    <router-link class="nav__item" :class="{_active: !!this.$route.path.match(/home/g)}" to='/home'>
+    <router-link
+      class="nav__item"
+      :class="{_active: !!$route.path.match(/home/g)}"
+      to="/home"
+    >
       Главная
     </router-link>
-    <router-link class="nav__item" :class="{_active: !!this.$route.path.match(/services/g)}" to='/services'>
+    <router-link
+      class="nav__item"
+      :class="{_active: !!$route.path.match(/services/g)}"
+      to="/services"
+    >
       Сервисы
     </router-link>
-    <router-link class="nav__item" :class="{_active: !!this.$route.path.match(/threats-bank/g)}" to='/threats-bank'>
+    <router-link
+      class="nav__item"
+      :class="{_active: !!$route.path.match(/threats-bank/g)}"
+      to="/threats-bank"
+    >
       База данных угроз
     </router-link>
   </nav>

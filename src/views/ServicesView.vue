@@ -1,27 +1,26 @@
 <template>
   <DefaultLayout>
     <section
-        class="services"
-        v-if="$route.path === '/services' "
+      v-if="$route.path === '/services' "
+      class="services"
     >
       <ServiceItem
-          subtitle="Модель угроз"
-          :link="links.threatsModel"
-          link-title="Реализовать модель угроз"
-          title-red="Модель угроз (безопасности информации)"
-          :img-src="images.threat"
-
+        subtitle="Модель угроз"
+        :link="links.threatsModel"
+        link-title="Реализовать модель угроз"
+        title-red="Модель угроз (безопасности информации)"
+        :img-src="images.threat"
       >
         — это физическое, математическое, описательное представление
         свойств или характеристик угроз безопасности информации.
       </ServiceItem>
 
       <ServiceItem
-          subtitle="Модель нарушителя"
-          :link="links.intruderModel"
-          link-title="Реализовать модель нарушителя"
-          title-red="Модель нарушителя"
-          :img-src="images.intruder"
+        subtitle="Модель нарушителя"
+        :link="links.intruderModel"
+        link-title="Реализовать модель нарушителя"
+        title-red="Модель нарушителя"
+        :img-src="images.intruder"
       >
         представляет собой  совокупность предположений о
         возможностях нарушителя, которые он может использовать для разработки
@@ -29,34 +28,30 @@
       </ServiceItem>
 
       <ServiceItem
-          subtitle="Вектор атаки"
-          :link="links.attackVector"
-          link-title="Рассчитать вектор атаки"
-          title-red="Вектор атаки"
-          :img-src="images.vector"
+        subtitle="Вектор атаки"
+        :link="links.attackVector"
+        link-title="Рассчитать вектор атаки"
+        title-red="Вектор атаки"
+        :img-src="images.vector"
       >
         определяет путь, которым злоумышленники доставляют
         полезную нагрузку на компьютер. Для одного и того же устройства
         или программы может существовать несколько векторов атаки.
-
       </ServiceItem>
-
     </section>
 
     <section
-        class="service"
-        v-else
+      v-else
+      class="service"
     >
-      <router-view>
-
-      </router-view>
+      <router-view />
     </section>
   </DefaultLayout>
 </template>
 
 <script>
 import DefaultLayout from "@/layout/DefaultLayout";
-import ServiceItem from "@/components/ServiceItem";
+import ServiceItem from "@/pages/services/ServiceItem";
 
 import paths from "@/constants/paths";
 

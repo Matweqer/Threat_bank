@@ -1,16 +1,16 @@
-<template >
+<template>
   <router-link
-      class="link"
-      :to="linkTo"
+    class="link"
+    :to="linkTo"
   >
     <div class="item">
       <img
-          class="item__img"
-          :src="imgSrc"
-          alt=""
+        class="item__img"
+        :src="imgSrc"
+        alt=""
       >
       <p class="item__subtitle">
-        {{subtitle}}
+        {{ subtitle }}
       </p>
     </div>
   </router-link>
@@ -39,12 +39,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'src/assets/scss/index.scss';
+@import '../../assets/scss/index';
 
 .link {
   text-decoration: none;
   color: #000000;
 }
+
 .item {
   @include flex-column-center;
   width: 360px;
@@ -54,15 +55,18 @@ export default {
   border-radius: 10px;
   margin: 0 60px 90px;
   transition: box-shadow 0.3s ease-in 0s;
+
   &__img {
     width: 170px;
     height: 170px;
   }
+
   &__subtitle {
     @include main-font(28px, 600);
     margin-top: 70px;
     transition: font-size 0.3s ease-out 0s;
   }
+
   &__subtitle:hover {
     font-size: 32px;
   }
@@ -78,10 +82,12 @@ export default {
     width: 280px;
     height: 330px;
     margin: 0 25px 41px;
+
     &__img {
       width: 135px;
       height: 135px;
     }
+
     &__subtitle {
       @include main-font(26px, 600);
       margin-top: 60px;
@@ -94,25 +100,30 @@ export default {
     width: 230px;
     height: 270px;
     margin: 0 15px 41px;
+
     &__img {
       width: 110px;
       height: 110px;
     }
+
     &__subtitle {
       @include main-font(24px, 600);
       margin-top: 45px;
     }
   }
 }
+
 @media (max-width: 700px) {
   .item {
     width: 180px;
     height: 210px;
     margin: 0 15px 41px;
+
     &__img {
       width: 90px;
       height: 90px;
     }
+
     &__subtitle {
       @include main-font(20px, 500);
       margin-top: 35px;
@@ -126,10 +137,12 @@ export default {
     width: 115px;
     height: 146px;
     margin: 0 15px 41px;
+
     &__img {
       width: 41px;
       height: 41px;
     }
+
     &__subtitle {
       @include main-font(14px, 500);
       margin-top: 26px;

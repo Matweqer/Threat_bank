@@ -1,7 +1,7 @@
 <template>
-<div class="intruder">
-  Модель нарушителя
-</div>
+  <div class="intruder">
+    Модель нарушителя
+  </div>
 </template>
 
 <script>

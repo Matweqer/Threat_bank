@@ -1,91 +1,75 @@
 <template>
   <DefaultLayout>
     <section
-        class="threats"
-        v-if="$route.path === '/threats-bank' "
+      v-if="$route.path === '/threats-bank' "
+      class="threats"
     >
       <ThreatItem
-          subtitle="Объект"
-          :img-src="image.obj"
-          :link-to="links.objects"
-      >
-
-      </ThreatItem>
+        subtitle="Объект"
+        :img-src="image.obj"
+        :link-to="links.objects"
+      />
 
       <ThreatItem
-          subtitle="СФХ"
-          :img-src="image.sfh"
-          :link-to="links.sfc"
-      >
-
-      </ThreatItem>
+        subtitle="СФХ"
+        :img-src="image.sfh"
+        :link-to="links.sfc"
+      />
 
       <ThreatItem
-          subtitle="Атаки"
-          :img-src="image.attack"
-          :link-to="links.attacks"
-      >
-
-      </ThreatItem>
+        subtitle="Атаки"
+        :img-src="image.attack"
+        :link-to="links.attacks"
+      />
 
       <ThreatItem
-          subtitle="Уязвимости"
-          :img-src="image.vuln"
-          :link-to="links.vulnerabilities"
-      >
-
-      </ThreatItem>
+        subtitle="Уязвимости"
+        :img-src="image.vuln"
+        :link-to="links.vulnerabilities"
+      />
 
 
       <ThreatItem
-          subtitle="Риск"
-          :img-src="image.risk"
-          :link-to="links.risk"
-      >
-
-      </ThreatItem>
+        subtitle="Риск"
+        :img-src="image.risk"
+        :link-to="links.risk"
+      />
 
       <ThreatItem
-          subtitle="Контрмеры"
-          :img-src="image.countr"
-          :link-to="links.countermeasures"
-      >
-
-      </ThreatItem>
+        subtitle="Контрмеры"
+        :img-src="image.countr"
+        :link-to="links.countermeasures"
+      />
 
       <ThreatItem
-          subtitle="Угрозы"
-          :img-src="image.threat"
-          :link-to="links.threats"
-      >
-
-      </ThreatItem>
-
+        subtitle="Угрозы"
+        :img-src="image.threat"
+        :link-to="links.threats"
+      />
     </section>
 
     <section
-        class="threat"
-        v-else
+      v-else
+      class="threat"
     >
-      <router-view>
-
-      </router-view>
+      <router-view />
     </section>
   </DefaultLayout>
 </template>
 
+
 <script>
 import DefaultLayout from "@/layout/DefaultLayout";
-import ThreatItem from "@/components/ThreatItem";
+import ThreatItem from "@/pages/threat-bank/ThreatItem";
 import paths from "@/constants/paths";
 
 
 export default {
+  name: "ThreatsBankView",
   components: {
     DefaultLayout,
     ThreatItem
   },
-  name: "ThreatsBankView",
   data() {
     return {
       image: {

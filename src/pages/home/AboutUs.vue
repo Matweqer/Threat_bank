@@ -5,15 +5,24 @@
     </div>
     <div class="about-us__container">
       <div class="about-us__left">
-        <p class="about-us__text">Использование компьютера требует специальных навыков.
+        <p class="about-us__text">
+          Использование компьютера требует специальных навыков.
           Людей, достигших в этом мастерства, иногда называют «хакерами».
           Обычно хакер – это человек, который создаёт программное обеспечение на специальном компьютерном языке.
           Но слово «хакер» также применимо к человеку, который пытается украсть информацию из компьютерных систем.
         </p>
-        <LinkTo class="about-us__link" v-bind:to="linkToAuth">Узнать больше</LinkTo>
+        <LinkTo
+          class="about-us__link"
+          :to="linkToAuth"
+        >
+          Узнать больше
+        </LinkTo>
       </div>
       <div class="about-us__right">
-        <img src="../assets/images/home-view/about.png" alt="about us">
+        <img
+          src="../../assets/images/home-view/about.png"
+          alt="about us"
+        >
       </div>
     </div>
   </div>
@@ -31,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/index.scss';
+@import '../../assets/scss/index';
 
 .about-us {
   @include flex-column-center;

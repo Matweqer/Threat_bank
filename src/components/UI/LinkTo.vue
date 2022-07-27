@@ -1,13 +1,20 @@
 <template>
-    <router-link class="link" to=''>
-      <div class="link__text">
-        <slot></slot>
-      </div>
-      <div class="link__arrow">
-        <img src="../../assets/images/componentsImg/arrow.png" alt="-->">
-      </div>
-    </router-link>
+  <router-link
+    class="link"
+    to=""
+  >
+    <div class="link__text">
+      <slot />
+    </div>
+    <div class="link__arrow">
+      <img
+        src="../../assets/images/componentsImg/arrow.png"
+        alt="-->"
+      >
+    </div>
+  </router-link>
 </template>
+
 
 <script>
 export default {

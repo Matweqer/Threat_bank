@@ -1,54 +1,71 @@
 <template>
   <DefaultLayout>
     <div class="home">
-      <img class="home__desktop" src="../assets/images/home-view/desktop.png" alt="desktop">
-      <AboutUs class="home__about"></AboutUs>
+      <img
+        class="home__desktop"
+        src="../assets/images/home-view/desktop.png"
+        alt="desktop"
+      >
+      <AboutUs class="home__about" />
       <div class="home__container">
-
         <InfoSection
-            style=""
-            class="home__stats"
-            :img-src="image.statDiagram"
-            :link="links.auth">
-          <template v-slot:title>Статистика за год</template>
-          <template v-slot:text>
+          style=""
+          class="home__stats"
+          :img-src="image.statDiagram"
+          :link="links.auth"
+        >
+          <template #title>
+            Статистика за год
+          </template>
+          <template #text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом
             иногда называют «хакерами». Обычно хакер – это человек, который создаёт программное
             обеспечение на специальном компьютерном языке. Но слово «хакер» также применимо
             к человеку, который пытается украсть информацию из компьютерных систем.
           </template>
-          <template v-slot:link>Узнать больше</template>
-
+          <template #link>
+            Узнать больше
+          </template>
         </InfoSection>
 
         <InfoSection
-            style="flex-direction: row-reverse"
-            class="home__services"
-            :img-src="image.service"
-            :link="links.services">
-          <template v-slot:title>Сервисы</template>
-          <template v-slot:text>
+          style="flex-direction: row-reverse"
+          class="home__services"
+          :img-src="image.service"
+          :link="links.services"
+        >
+          <template #title>
+            Сервисы
+          </template>
+          <template #text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом
             иногда называют «хакерами». Обычно хакер – это человек, который создаёт программное
             обеспечение на специальном компьютерном языке. Но слово «хакер» также применимо
             к человеку, который пытается украсть информацию из компьютерных систем.
           </template>
-          <template v-slot:link>Перейти в "Сервисы"</template>
+          <template #link>
+            Перейти в "Сервисы"
+          </template>
         </InfoSection>
 
         <InfoSection
-            style=""
-            class="home__threats"
-            :img-src="image.threat"
-            :link="links.threatsBank">
-          <template v-slot:title>База данных угроз</template>
-          <template v-slot:text>
+          style=""
+          class="home__threats"
+          :img-src="image.threat"
+          :link="links.threatsBank"
+        >
+          <template #title>
+            База данных угроз
+          </template>
+          <template #text>
             Использование компьютера требует специальных навыков. Людей, достигших в этом
             иногда называют «хакерами». Обычно хакер – это человек, который создаёт программное
             обеспечение на специальном компьютерном языке. Но слово «хакер» также применимо
             к человеку, который пытается украсть информацию из компьютерных систем.
           </template>
-          <template v-slot:link>Перейти в "Базы данных угроз"</template>
+          <template #link>
+            Перейти в "Базы данных угроз"
+          </template>
         </InfoSection>
       </div>
     </div>
@@ -57,8 +74,8 @@
 
 <script>
 import DefaultLayout from "@/layout/DefaultLayout";
-import AboutUs from "@/components/AboutUs";
-import InfoSection from "@/components/InfoSection";
+import AboutUs from "@/pages/home/AboutUs";
+import InfoSection from "@/pages/home/InfoSection";
 
 import paths from "@/constants/paths";
 

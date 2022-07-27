@@ -1,33 +1,28 @@
 <template>
   <ListLayout>
     <ItemsList
-        class="vulnerability__list"
-        itemsType="V"
-        :items="vulnerabilities"
-    >
-
-    </ItemsList>
+      class="vulnerability__list"
+      items-type="V"
+      :items="vulnerabilities"
+    />
   </ListLayout>
 
-  <router-view>
-
-  </router-view>
-
+  <router-view />
 </template>
 
 <script>
-import ItemsList from "@/components/ItemsList";
+import ItemsList from "@/pages/threat-bank/ItemsList";
 import ListLayout from "@/layout/ListLayout";
 
 import vulnerabilities from "@/constants/vulnerabilities";
 
 
 export default {
+  name: "AttacksView",
   components: {
     ItemsList,
     ListLayout,
   },
-  name: "AttacksView",
   data() {
     return {
       vulnerabilities

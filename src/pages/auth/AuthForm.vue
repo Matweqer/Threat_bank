@@ -1,12 +1,29 @@
 <template>
-  <form class="form" action="">
-    <label class="form__login"> <input type="text" placeholder="Логин или почта"> </label>
-    <label class="form__password"> <input type="password" placeholder="Пароль"> <img
-        src="@/assets/images/auth-page/password-eye.png" alt="eye" class="form__password__eye"> </label>
+  <form
+    class="form"
+    action=""
+  >
+    <label class="form__login"> <input
+      type="text"
+      placeholder="Логин или почта"
+    > </label>
+    <label class="form__password"> <input
+      type="password"
+      placeholder="Пароль"
+    > <img
+      src="@/assets/images/auth-page/password-eye.png"
+      alt="eye"
+      class="form__password__eye"
+    > </label>
     <!--   Стоит ли выносить эту ссылку в компонент строницы ??? -->
-    <a class="form__forgot-pass" href="">Забыли пароль?</a>
+    <a
+      class="form__forgot-pass"
+      href=""
+    >Забыли пароль?</a>
 
-    <button class="form__button">Войти</button>
+    <button class="form__button">
+      Войти
+    </button>
   </form>
 </template>
 
@@ -18,7 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "src/assets/scss/variables.scss";
+@import "../../assets/scss/variables";
 
 .form {
   @include flex-column-center;

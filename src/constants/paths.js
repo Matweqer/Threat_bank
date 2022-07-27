@@ -1,36 +1,36 @@
 export default {
-    auth: '/auth',
+  auth: "/auth",
 
-    main: '/',
-    home: '/home',
+  main: "/",
+  home: "/home",
 
-    services: '/services',
-        threatsModel: '/services/threats-model',
-        intruderModel: '/services/intruder-model',
-        attackVector: '/services/attack-vector',
+  services: "/services",
+  threatsModel: "/services/threats-model",
+  intruderModel: "/services/intruder-model",
+  attackVector: "/services/attack-vector",
 
-    threatsBank: '/threats-bank',
-        sfc: '/threats-bank/SFC',
-        sfcItem: '/threats-bank/SFC/:id',
+  threatsBank: "/threats-bank",
 
-        objects: '/threats-bank/objects',
-        object: '/threats-bank/objects/:id',
+  sfc: "/threats-bank/SFC",
+  sfcItem: "/threats-bank/SFC/:id",
 
-        attacks: '/threats-bank/attacks',
-        attack: '/threats-bank/attacks/:id',
+  objects: "/threats-bank/objects",
+  object: "/threats-bank/objects/:id",
 
-        vulnerabilities: '/threats-bank/vulnerabilities',
-        vulnerability: '/threats-bank/vulnerabilities/:id',
+  attacks: "/threats-bank/attacks",
+  attack: "/threats-bank/attacks/:id",
 
-        risk: '/threats-bank/risk',
-        riskItem: '/threats-bank/risk/:id',
+  vulnerabilities: "/threats-bank/vulnerabilities",
+  vulnerability: "/threats-bank/vulnerabilities/:id",
 
-        countermeasures: '/threats-bank/countermeasures',
-        countermeasure: '/threats-bank/countermeasures/:id',
+  risk: "/threats-bank/risk",
+  riskItem: "/threats-bank/risk/:id",
 
-        threats: '/threats-bank/threats',
-        threat: '/threats-bank/threats/:id',
+  countermeasures: "/threats-bank/countermeasures",
+  countermeasure: "/threats-bank/countermeasures/:id",
 
-    development: '/dev',
+  threats: "/threats-bank/threats",
+  threat: "/threats-bank/threats/:id",
 
-}
+  development: "/dev",
+};

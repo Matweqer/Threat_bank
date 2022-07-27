@@ -1,26 +1,25 @@
 <template>
   <div
-      class="numbers"
-      @click="toggleCounter"
+    class="numbers"
+    @click="toggleCounter"
   >
     <span
-        class="numbers__item -active"
+      class="numbers__item -active"
     >10</span>
 
     <span
-        class="numbers__item"
+      class="numbers__item"
     >20</span>
+    
 
     <span
-        class="numbers__item"
+      class="numbers__item"
     >50</span>
 
     <span
-        class="numbers__item"
+      class="numbers__item"
     >100</span>
-
   </div>
-
 </template>
 
 <script>

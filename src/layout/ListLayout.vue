@@ -1,12 +1,9 @@
 <template>
   <div class="container">
-    <BreadCrumbs></BreadCrumbs>
+    <BreadCrumbs />
     <div class="container__inner">
-      <slot>
-
-      </slot>
+      <slot />
     </div>
-
   </div>
 </template>
 

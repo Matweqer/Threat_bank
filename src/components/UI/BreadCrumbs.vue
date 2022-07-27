@@ -1,22 +1,21 @@
 <template>
   <div
-      class="path"
-      @click="getPath"
+    class="path"
+    @click="getPath"
   >
     <span
-        class="path__point"
-        v-for="(point, index) in path"
-        :key="index"
+      v-for="(point, index) in path"
+      :key="index"
+      class="path__point"
     >
       <router-link
-          class="path__link"
-          :to="point.path"
+        class="path__link"
+        :to="point.path"
       >
         {{ point.name }}
       </router-link>
       <span v-if="index !== path.length - 1">/</span>
     </span>
-
   </div>
 </template>
 
@@ -34,6 +33,9 @@ export default {
     return {
       path: this.getPath()
     }
+  },
+  mounted() {
+    this.updatePathList()
   },
   methods: {
     pathIsLong() {
@@ -79,9 +81,6 @@ export default {
         })
       }
     }
-  },
-  mounted() {
-    this.updatePathList()
   }
 }
 </script>

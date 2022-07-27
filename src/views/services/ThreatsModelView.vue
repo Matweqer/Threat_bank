@@ -1,7 +1,7 @@
 <template>
- <div class="model">
-   Модель угроз
- </div>
+  <div class="model">
+    Модель угроз
+  </div>
 </template>
 
 <script>

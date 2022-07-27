@@ -1,5 +1,4 @@
 <template>
-
   <div class="not-found">
     <div class="not-found__container">
       <p class="not-found__num">
@@ -9,11 +8,14 @@
         Попробуйте посетить этот раздел позднее
       </p>
       <p
-          class="not-found__back"
-          @click="$router.go(-1)"
+        class="not-found__back"
+        @click="$router.go(-1)"
       >
         Вернуться назад
-        <img src="../assets/images/componentsImg/arrow.png" alt=">>>">
+        <img
+          src="../assets/images/componentsImg/arrow.png"
+          alt=">>>"
+        >
       </p>
     </div>
   </div>

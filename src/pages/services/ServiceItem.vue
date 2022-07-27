@@ -1,29 +1,40 @@
 <template>
   <div
-      class="item"
-      style="width: 410px"
+    class="item"
+    style="width: 410px"
   >
-      <div class="item__left">
-        <img class="item__left__img" :src="imgSrc" alt="service img">
-        <div class="item__left__subtitle">{{subtitle}}</div>
-      </div>
-
-      <div class="item__right">
-        <div class="item__right__content">
-          <p class="item__right__text">
-            <span class="item__right__text__green">{{titleRed}}</span>
-            <slot></slot>
-          </p>
-          <LinkTo :to="link"> {{linkTitle}} </LinkTo>
-        </div>
-      </div>
-
-      <button
-          class="item__button"
-          @click="toggleService"
+    <div class="item__left">
+      <img
+        class="item__left__img"
+        :src="imgSrc"
+        alt="service img"
       >
-        <img src="../assets/images/services-view/Vector.png" alt="==>">
-      </button>
+      <div class="item__left__subtitle">
+        {{ subtitle }}
+      </div>
+    </div>
+
+    <div class="item__right">
+      <div class="item__right__content">
+        <p class="item__right__text">
+          <span class="item__right__text__green">{{ titleRed }}</span>
+          <slot />
+        </p>
+        <LinkTo :to="link">
+          {{ linkTitle }}
+        </LinkTo>
+      </div>
+    </div>
+
+    <button
+      class="item__button"
+      @click="toggleService"
+    >
+      <img
+        src="../../assets/images/services-view/Vector.png"
+        alt="==>"
+      >
+    </button>
   </div>
 </template>
 
@@ -79,7 +90,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import  'src/assets/scss/index.scss';
+@import '../../assets/scss/index';
 
 .item {
   position: relative;

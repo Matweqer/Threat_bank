@@ -1,7 +1,11 @@
 <template>
   <header class="header__container">
     <div class="header__user">
-      <img src="" alt="" class="header__user__icon">
+      <img
+        src=""
+        alt=""
+        class="header__user__icon"
+      >
       111
     </div>
     <div class="header__modal">

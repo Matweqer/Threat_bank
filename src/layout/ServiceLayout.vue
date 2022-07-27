@@ -1,12 +1,11 @@
 <template>
   <div class="container">
-    <BreadCrumbs></BreadCrumbs>
+    <BreadCrumbs
+      class="bread-crumbs"
+    />
     <div class="container__inner">
-      <slot>
-
-      </slot>
+      <slot />
     </div>
-
   </div>
 </template>
 
@@ -26,10 +25,14 @@ export default {
   width: 1200px;
 
   &__inner {
-    width: 1060px;
-    margin: 0 auto;
-    @include flex-column-center;
+    width: 1160px;
+    min-height: 858px;
+    margin-bottom: 203px;
   }
+}
+
+.bread-crumbs {
+  margin-bottom: 137px;
 }
 
 </style>
