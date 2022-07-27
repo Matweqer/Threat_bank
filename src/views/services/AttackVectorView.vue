@@ -1,38 +1,15 @@
 <template>
-  <div class="vector">
-    <CurrentPath
-        class="vector__path"
-        :path="path"
-    >
-    </CurrentPath>
-    <div class="vector__container">
-
-      Вектор атаки
-    </div>
-  </div>
+  <ServiceLayout />
 </template>
 
 <script>
-import paths from "@/constants/paths";
-
-const {services, attackVector} = paths
+import ServiceLayout from "@/layout/ServiceLayout";
 
 export default {
   name: "AttackVectorView",
-  components: {},
+  components: {ServiceLayout},
   data() {
-    return {
-      path: [
-        {
-          name: 'Сервисы',
-          link: services
-        },
-        {
-          name: 'Вектор атаки',
-          link: attackVector
-        }
-      ]
-    }
+    return {}
   }
 
 
